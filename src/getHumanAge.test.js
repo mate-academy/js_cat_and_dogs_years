@@ -34,4 +34,16 @@ describe(`Function 'getHumanAge':`, () => {
   it(`input values should be of type 'number'`, () => {
     expect(getHumanAge()).not.toBeNaN();
   });
+
+  it(`getHumanAge(15, 15) should return [1, 1]`, () => {
+    expect(getHumanAge(15, 15)).toMatchObject([1, 1]);
+  });
+
+  it(`getHumanAge(24, 24) should return [2, 2]`, () => {
+    expect(getHumanAge(24, 24)).toMatchObject([2, 2]);
+  });
+
+  it(`getHumanAge(29, 29) should return [3, 3]`, () => {
+    expect(getHumanAge(29, 29)).toMatchObject([3, 3]);
+  });
 });
