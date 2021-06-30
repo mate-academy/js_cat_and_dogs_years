@@ -43,7 +43,7 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(29, 30)).toEqual([3, 3]);
   });
 
-  it(`should return 'NaN' if "age" argument is not a number`, () => {
-    expect(getHumanAge(NaN, 'string')).toEqual([NaN, NaN]);
+  it(`should return [21, 17], if 'cat age' = 100 and 'dog age' = 100`, () => {
+    expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
