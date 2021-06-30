@@ -8,7 +8,7 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof getHumanAge()).toStrictEqual('object');
+    expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
   it(`15 human years should be equal to 1st dogs' and cats' year`, () => {
