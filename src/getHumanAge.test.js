@@ -8,7 +8,7 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof getHumanAge()).toBe('object');
+    expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
   it(`should return an array where the first element is 'human' age 
