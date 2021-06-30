@@ -11,7 +11,7 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
-  it(`variables should be of type 'number'`, () => {
+  it(`values should be of type 'number'`, () => {
     expect(getHumanAge()).not.toBeNaN();
   });
 
