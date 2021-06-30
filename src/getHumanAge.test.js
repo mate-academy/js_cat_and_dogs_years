@@ -11,6 +11,10 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
+  it(`should return NaN if catAge/dogAge parametr is not a number`, () => {
+    expect(getHumanAge('df', 'string')).toEqual([NaN, NaN]);
+  });
+
   // using boundary values technique
   it(`should return [0, 0] if catAge = 0, dogAge = 0`, () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
