@@ -8,15 +8,11 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(getHumanAge()).toBeInstanceOf(Array);
+    expect(typeof getHumanAge()).toEqual('object');
   });
 
   it(`should return [1, 1] array if catAge = 15 and dogAge = 15`, () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
-  });
-
-  it(`input values should be of type 'number'`, () => {
-    expect(getHumanAge()).not.toBeNaN();
   });
 
   it(`should return [1, 2] array if catAge = 15 and dogAge = 24`, () => {
