@@ -11,32 +11,28 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
-  it(`should return 0 animals age for 0 human age `, () => {
+  it(`should return catsAge=0 and dogaAge=0 if humanAge=0 `, () => {
     expect(getHumanAge(0, 0)).toStrictEqual([0, 0]);
   });
 
-  it(`should return 0 animals age for human age less than 15 years`, () => {
+  it(`should return catsAge=0 and dogaAge=0 if humanAge<15`, () => {
     expect(getHumanAge(11, 9)).toStrictEqual([0, 0]);
   });
 
-  it(`should return 1 animals age for human age is 15 years`, () => {
+  it(`should return catsAge=1 and dogaAge=1 if humanAge=15`, () => {
     expect(getHumanAge(15, 15)).toStrictEqual([1, 1]);
   });
 
-  it(`should return 1 animals age for human age between 15 and 24`, () => {
+  it(`should return catsAge=1 and dogaAge=1 if 15<humanAge<24`, () => {
     expect(getHumanAge(22, 18)).toStrictEqual([1, 1]);
   });
 
-  it(`should return 2 animals age for human age is 24 years`, () => {
+  it(`should return catsAge=2 and dogaAge=2 if humanAge=24`, () => {
     expect(getHumanAge(24, 24)).toStrictEqual([2, 2]);
   });
 
-  it(`should return +1 animals age for +4 years for c and +5 for d`, () => {
-    expect(getHumanAge(45, 87)).toStrictEqual([7, 14]);
-  });
-
-  it(`should return NaN if age is not a number`, () => {
-    expect(getHumanAge('a', 'b')).toStrictEqual([NaN, NaN]);
+  it(`should return catsAge=7 and dogaAge=6 if humanAge=45`, () => {
+    expect(getHumanAge(45, 45)).toStrictEqual([7, 6]);
   });
 
   it(`should return 0 if age is negative number`, () => {
