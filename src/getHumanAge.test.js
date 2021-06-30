@@ -23,7 +23,15 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(16, 27)).toEqual([1, 2]);
   });
 
-  it(`should return an array [3, 6] with catAge = 28 and dogAge = 44`, () => {
-    expect(getHumanAge(28, 44)).toEqual([3, 6]);
+  it(`should return an array [0, 6] with catAge = 0 and dogAge = 44`, () => {
+    expect(getHumanAge(0, 44)).toEqual([0, 6]);
+  });
+
+  it(`should return an array [2, 2] with catAge = 24 and dogAge = 24`, () => {
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+  });
+
+  it(`should return an array [3, 3] with catAge = 29 and dogAge = 30`, () => {
+    expect(getHumanAge(29, 30)).toEqual([3, 3]);
   });
 });
