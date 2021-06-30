@@ -35,15 +35,27 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge()).not.toBeNaN();
   });
 
-  it(`getHumanAge(15, 15) should return [1, 1]`, () => {
-    expect(getHumanAge(15, 15)).toMatchObject([1, 1]);
+  it(`getHumanAge(14, 14) should return [0, 0]`, () => {
+    expect(getHumanAge(14, 14)).toMatchObject([0, 0]);
   });
 
-  it(`getHumanAge(24, 24) should return [2, 2]`, () => {
-    expect(getHumanAge(24, 24)).toMatchObject([2, 2]);
+  it(`getHumanAge(16, 16) should return [1, 1]`, () => {
+    expect(getHumanAge(16, 16)).toMatchObject([1, 1]);
   });
 
-  it(`getHumanAge(29, 29) should return [3, 3]`, () => {
-    expect(getHumanAge(29, 29)).toMatchObject([3, 3]);
+  it(`getHumanAge(23, 23) should return [1, 1]`, () => {
+    expect(getHumanAge(23, 23)).toMatchObject([1, 1]);
+  });
+
+  it(`getHumanAge(25, 25) should return [2, 2]`, () => {
+    expect(getHumanAge(25, 25)).toMatchObject([2, 2]);
+  });
+
+  it(`getHumanAge(27, 28) should return [2, 2]`, () => {
+    expect(getHumanAge(27, 28)).toMatchObject([2, 2]);
+  });
+
+  it(`getHumanAge(29, 30) should return [3, 3]`, () => {
+    expect(getHumanAge(29, 30)).toMatchObject([3, 3]);
   });
 });
