@@ -27,7 +27,7 @@ describe(`Function 'getHumanAge':`, () => {
       .toEqual([1, 1]);
   });
 
-  it(`should return [3, 6] when catAge > 24 and dogAge > 24`, () => {
+  it(`should return [3, 6] when catAge =28 and dogAge = 44`, () => {
     expect(getHumanAge(28, 44))
       .toEqual([3, 6]);
   });
@@ -36,7 +36,7 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  it(`should return [3, 6] when catAge > 28 and dogAge > 29`, () => {
+  it(`should return [3, 6] when catAge = 30 and dogAge = 44`, () => {
     expect(getHumanAge(30, 44))
       .toEqual([3, 6]);
   });
