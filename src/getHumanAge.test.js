@@ -8,44 +8,26 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(getHumanAge(3, 4)).toBeInstanceOf(Array);
+    expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
-  it(`should return [0, 0] array if catAge < 15 and dogAge < 15`, () => {
-    expect(getHumanAge(3, 4)).toEqual([0, 0]);
-  });
-
-  it(`should return [1, 1] if catAge = 15 and dogAge = 15`, () => {
+  it(`should return [1, 1] if dogAge = 15, catAge = 15`, () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  it(`should return [1, 1] if catAge > 15, catAge < 23, dogAge > 15 and dogAge < 23`,
-    () => {
-      expect(getHumanAge(17, 19)).toEqual([1, 1]);
-    });
+  it(`should return [0, 0] if catAge = 3 and dogAge = 4`, () => {
+    expect(getHumanAge(3, 4)).toEqual([0, 0]);
+  });
 
-  it(`should return [2, 2] if catAge = 24 and dogAge = 24`, () => {
+  it(`should return [2, 2] if dogAge = 24, catAge = 24`, () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
-  it(`should return [2,2] if catAge > 24, catAge < 27, dogAge > 24 and dogAge < 28`,
-    () => {
-      expect(getHumanAge(26, 27)).toEqual([2, 2]);
-    });
-
-  it(`should return [3, 3] if catAge = 28 and dogAge=29`, () => {
+  it(`should return [3, 3] if catAge = 28, dogAge = 29`, () => {
     expect(getHumanAge(28, 29)).toEqual([3, 3]);
   });
 
-  it(`should return [8, 7] if catAge = 50 and dogAge=50`, () => {
-    expect(getHumanAge(50, 50)).toEqual([8, 7]);
-  });
-
-  it(`should return '0' if "age" argument is null`, () => {
-    expect(getHumanAge(null, 0)).toEqual([0, 0]);
-  });
-
-  it(`should ignore fractional part of "age" arguments`, () => {
-    expect(getHumanAge(14.7, 23.7)).toEqual([0, 1]);
+  it(`should return [0, 0] if catAge = 9, dogAge = 9`, () => {
+    expect(getHumanAge(9, 9)).toEqual([0, 0]);
   });
 });
