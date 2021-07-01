@@ -23,19 +23,23 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(15, 15)).toStrictEqual([1, 1]);
   });
 
+  it(`should return catsAge=1 and dogaAge=1 if humanAge=16`, () => {
+    expect(getHumanAge(16, 16)).toStrictEqual([1, 1]);
+  });
+
   it(`should return catsAge=1 and dogaAge=1 if 15<humanAge<24`, () => {
     expect(getHumanAge(22, 18)).toStrictEqual([1, 1]);
   });
 
-  it(`should return catsAge=2 and dogaAge=2 if humanAge=24`, () => {
+  it(`should return catsAge=1 and dogaAge=1 if humanAge=23`, () => {
+    expect(getHumanAge(23, 23)).toStrictEqual([1, 1]);
+  });
+
+  it(`should return catsAge=2 and dogaAge2= if humanAge=24`, () => {
     expect(getHumanAge(24, 24)).toStrictEqual([2, 2]);
   });
 
   it(`should return catsAge=7 and dogaAge=6 if humanAge=45`, () => {
     expect(getHumanAge(45, 45)).toStrictEqual([7, 6]);
-  });
-
-  it(`should return 0 if age is negative number`, () => {
-    expect(getHumanAge(-3, -7)).toStrictEqual([0, 0]);
   });
 });
