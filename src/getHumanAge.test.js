@@ -7,12 +7,12 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  it(`should return NaN, 'cat age' and 'dog age' = 'string'`, () => {
-    expect(getHumanAge('string', 'string')).toEqual([NaN, NaN]);
+  it(`should return [0, 0], if 'cat age' = 0 and 'dog age' = 0`, () => {
+    expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  it(`should return NaN, 'cat age' = NaN and 'dog age' = 'string'`, () => {
-    expect(getHumanAge(NaN, 'string')).toEqual([NaN, NaN]);
+  it(`should return [1, 1], if 'cat age' = 15 and 'dog age' = 15`, () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
   it(`should return [2, 2], if 'cat age' = 24 and 'dog age' = 24`, () => {
