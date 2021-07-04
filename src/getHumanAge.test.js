@@ -11,16 +11,12 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
-  it(`should return an array with length of 2`, () => {
-    expect(getHumanAge()).toHaveLength(2);
-  });
-
   it(`should return [0, 0] if catAge = 0, dogAge = 0`, () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  it(`should return [0, 0] if catAge = 8, dogAge = 8`, () => {
-    expect(getHumanAge(8, 8)).toEqual([0, 0]);
+  it(`should return [1, 0] if catAge = 16, dogAge = 14`, () => {
+    expect(getHumanAge(15, 14)).toEqual([1, 0]);
   });
 
   it(`should return [1, 1] if catAge = 15, dogAge = 15`, () => {
