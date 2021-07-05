@@ -22,4 +22,8 @@ describe(`Function 'getHumanAge':`, () => {
   it(`human years for csts ans dogs years`, () => {
     expect(getHumanAge(28, 29)).toEqual([3, 3]);
   });
+
+  it(`human years for csts ans dogs years`, () => {
+    expect(getHumanAge(9, 8)).toEqual([0, 0]);
+  });
 });
