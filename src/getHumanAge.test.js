@@ -23,7 +23,7 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
-  it(`should return [0, 0] when inputs < 15`, () => {
-    expect(getHumanAge(9, 9)).toEqual([48, 55]);
+  it(`should return [9, 9] cat/dog lifes when inputs 52, 60`, () => {
+    expect(getHumanAge(52, 60)).toEqual([9, 9]);
   });
 });
