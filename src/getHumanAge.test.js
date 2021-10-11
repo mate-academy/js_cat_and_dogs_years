@@ -36,7 +36,7 @@ describe(`Function 'getHumanAge':`, () => {
       .toEqual([2, 2]);
   });
 
-  it(`should return an array [3, 3] if getHumanAge(28, 23)`, () => {
+  it(`should return an array [3, 3] if getHumanAge(28, 29)`, () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
