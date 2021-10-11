@@ -8,15 +8,15 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(expect.arrayContaining(
-      getHumanAge()));
+    expect(getHumanAge([]))
+      .toBeInstanceOf(Array);
   });
 
   it(`should return first cat and dog year for 15 human years`, () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  it(`should return [2, 2] cat and dog year for [24, 24] human`, () => {
+  it(`should return second cat and dog year for 24 human years`, () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
