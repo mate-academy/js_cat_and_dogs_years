@@ -11,10 +11,6 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(13, 7)).toBeInstanceOf(Array);
   });
 
-  it(`typeof should return an 'object'`, () => {
-    expect(typeof getHumanAge(1, 3)).toBe('object');
-  });
-
   it(`should return [1, 1] if limit values cat=15, dog=15`, () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
