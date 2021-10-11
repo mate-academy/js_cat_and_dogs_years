@@ -6,6 +6,7 @@
  *
  * @returns {number[]}
  */
+
 function getHumanAge(catAge, dogAge) {
   const catToHuman = catAge < 15
     ? 0
