@@ -18,6 +18,7 @@ function getHumanAge(catAge, dogAge) {
       ? 1
       : 2 + Math.floor((dogAge - 24) / 5);
 
+  //
   return [catToHuman, dogToHuman];
 }
 
