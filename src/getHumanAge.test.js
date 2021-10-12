@@ -16,6 +16,10 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`15 human years for first cat and dog year`, () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
+  });
+
+  it(`15 human years for first cat and dog year`, () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
@@ -27,11 +31,12 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(28, 44)).toEqual([3, 6]);
   });
 
-  it(`Old people, old pets`, () => {
+  it(`Testing a large age for a human, a cat and a dog`, () => {
     expect(getHumanAge(72, 74)).toEqual([14, 12]);
   });
 
-  it(`continuity of generations`, () => {
+  it(`Testing a small age for a human, a 
+  cat and a big one for a human and a dog`, () => {
     expect(getHumanAge(1, 89)).toEqual([0, 15]);
   });
 });
