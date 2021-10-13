@@ -11,10 +11,6 @@ describe(`Function 'getHumanAge':`, () => {
     expect(getHumanAge(36, 51)).toBeInstanceOf(Array);
   });
 
-  it(`should converts human years into cat and dog years`, () => {
-    expect(getHumanAge(36, 51)).toEqual([5, 7]);
-  });
-
   it(`should work correctly for input identical ages for dogs and cats`, () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
