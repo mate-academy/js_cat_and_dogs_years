@@ -8,7 +8,7 @@ describe(`Function 'getHumanAge':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof getHumanAge(15, 24)).toEqual('object');
+    expect(getHumanAge()).toBeInstanceOf(Array);
   });
 
   it(`should return an array [1, 1] if catAge = 15 and dogAge = 15 `, () => {
