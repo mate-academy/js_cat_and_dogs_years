@@ -1,4 +1,4 @@
-Write a tests for the function `getHumanAge` which accepts two integers `catAge` and `dogAge` and converts 'animal' age into 'human' age. The function returns an array, where the first element is 'human' age of the cat and the second element is 'human' age of the dog. 
+Write tests for the function `getHumanAge` that accepts two integers `catAge` and `dogAge` and converts `animal` age into `human` age. The function returns an array, where the first element is 'human' age of the cat and the second element is 'human' age of the dog. 
 
 There is the rules how calculate the 'human' age:
 ```
