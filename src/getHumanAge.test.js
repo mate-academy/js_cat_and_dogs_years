@@ -35,8 +35,4 @@ describe('getHumanAge', () => {
   test(`23 cat and dog years should give 1 human years`, () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
-
-  test(`negative values of cat and dog years should give 0 human years`, () => {
-    expect(getHumanAge(-2, -3)).toEqual([0, 0]);
-  });
 });
