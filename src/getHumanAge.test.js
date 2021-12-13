@@ -8,7 +8,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test(`should return 0 for 0 cat's and dog's years`, () => {
+  test(`should return [0, 0] for 0 cat's and dog's years`, () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
