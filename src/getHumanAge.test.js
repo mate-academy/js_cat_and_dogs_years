@@ -13,13 +13,28 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Object);
   });
 
+  test('should return correct before the first threshould', () => {
+    expect(getHumanAge(14, 14))
+      .toEqual([0, 0]);
+  });
+
   test('should return correct result when the first threshould is met', () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test('should return correct result when the second threshould is met', () => {
+  test('should return correct before the second threshould', () => {
+    expect(getHumanAge(23, 23))
+      .toEqual([1, 1]);
+  });
+
+  test('should return correct result when the third threshould is met', () => {
     expect(getHumanAge(24, 24))
+      .toEqual([2, 2]);
+  });
+
+  test('should return correct before the third threshould', () => {
+    expect(getHumanAge(27, 28))
       .toEqual([2, 2]);
   });
 
