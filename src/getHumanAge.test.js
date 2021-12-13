@@ -8,7 +8,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [0, 0] of human years
   if each cat's and dog's age is a negative number`, () => {
     const catAge = -5;
     const dogAge = -24;
@@ -17,7 +17,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [0, 0] of human years
   if each cat's and dog's age equals zero`, () => {
     const catAge = 0;
     const dogAge = 0;
@@ -26,7 +26,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [0, 0] of human years
   if each cat's and dog's age is less then 15`, () => {
     const catAge = 14;
     const dogAge = 14;
@@ -35,7 +35,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [1, 1] of human years
   if each cat's and dog's age equals 15`, () => {
     const catAge = 15;
     const dogAge = 15;
@@ -44,7 +44,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [1, 1] of human years
   if each cat's and dog's age equals 23`, () => {
     const catAge = 23;
     const dogAge = 23;
@@ -53,7 +53,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [2, 2] of human years
   if each cat's and dog's age equals 24`, () => {
     const catAge = 24;
     const dogAge = 24;
@@ -62,7 +62,7 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [2, 2] of human years
   if each cat's and dog's age equals 27`, () => {
     const catAge = 27;
     const dogAge = 27;
@@ -71,7 +71,7 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [3, 2] of human years
   if each cat's and dog's age equals 28`, () => {
     const catAge = 28;
     const dogAge = 28;
@@ -80,7 +80,7 @@ describe('getHumanAge', () => {
       .toEqual([3, 2]);
   });
 
-  test(`should return correct array of human years
+  test(`should return an array [3, 3] of human years
   if each cat's and dog's age equals 29`, () => {
     const catAge = 29;
     const dogAge = 29;
@@ -89,8 +89,8 @@ describe('getHumanAge', () => {
       .toEqual([3, 3]);
   });
 
-  test(`should return correct array of human years
-  if each cat's and dog's age is 3 digit number`, () => {
+  test(`should return an array [57, 57] of human years
+  if cat's age is 245 years and dog's age is 300 years`, () => {
     const catAge = 245;
     const dogAge = 300;
 
