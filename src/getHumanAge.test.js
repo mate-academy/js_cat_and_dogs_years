@@ -57,7 +57,7 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test(`Function should return [2, 2]
+  test(`Function should return [8, 7]
   if cat's and dog's age >= 24 (catAge = 50; dogAge = 50)`, () => {
     const catAge = 50;
     const dogAge = 50;
