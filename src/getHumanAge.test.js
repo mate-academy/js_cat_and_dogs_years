@@ -13,32 +13,32 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Object);
   });
 
-  test('should return correct before the first threshould', () => {
+  test('should return [0, 0] if inputs are lower than 15', () => {
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
   });
 
-  test('should return correct result when the first threshould is met', () => {
+  test(`should return [1, 1] when inputs are more or equal than 15`, () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test('should return correct before the second threshould', () => {
+  test('should return [1, 1] when inputs are (23, 23)', () => {
     expect(getHumanAge(23, 23))
       .toEqual([1, 1]);
   });
 
-  test('should return correct result when the third threshould is met', () => {
+  test('should return [2, 2] when inputs are (24, 24)', () => {
     expect(getHumanAge(24, 24))
       .toEqual([2, 2]);
   });
 
-  test('should return correct before the third threshould', () => {
+  test('should return [2, 2] when inputs are (27, 28)', () => {
     expect(getHumanAge(27, 28))
       .toEqual([2, 2]);
   });
 
-  test('should return correct result when the third threshould is met', () => {
+  test('should return [3, 3] when inputs are (28, 29)', () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
@@ -55,12 +55,6 @@ describe('getHumanAge', () => {
 
   test('should return zeroes for negative numbers', () => {
     expect(getHumanAge(-28, -29))
-      .toEqual([0, 0]);
-  });
-
-  test(`should return zeroes when inputs are lower 
-    than first threshould`, () => {
-    expect(getHumanAge(-14, -14))
       .toEqual([0, 0]);
   });
 });
