@@ -3,17 +3,7 @@
 describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
-  test(`Function should return [0, 0] if
-  cat's and dog's age < 0 (catAge = -1; dogAge = -1)`, () => {
-    const catAge = -1;
-    const dogAge = -1;
-
-    expect(getHumanAge(catAge, dogAge))
-      .toEqual([0, 0]);
-  });
-
-  test(`Function should return [0, 0] if
-  cat's and dog's age >= 0 and < 15 (catAge = 0; dogAge = 0)`, () => {
+  test(`Function should return [0, 0] if catAge = 0 and dogAge = 0`, () => {
     const catAge = 0;
     const dogAge = 0;
 
@@ -21,8 +11,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`Function should return [0, 0] if
-  cat's and dog's age >= 0 and < 15 (catAge = 14; dogAge = 14)`, () => {
+  test(`Function should return [0, 0] if catAge = 14 and dogAge = 14`, () => {
     const catAge = 14;
     const dogAge = 14;
 
@@ -30,8 +19,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`Function should return [1, 1] if
-  cat's and dog's age >= 15 and < 24 (catAge = 15; dogAge = 15)`, () => {
+  test(`Function should return [1, 1] if catAge = 15 and dogAge = 15`, () => {
     const catAge = 15;
     const dogAge = 15;
 
@@ -39,8 +27,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test(`Function should return [1, 1] if
-  cat's and dog's age >= 15 and < 24 (catAge = 23; dogAge = 23)`, () => {
+  test(`Function should return [1, 1] if catAge = 23 and dogAge = 23`, () => {
     const catAge = 23;
     const dogAge = 23;
 
@@ -48,8 +35,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test(`Function should return [2, 2]
-  if cat's and dog's age >= 24 (catAge = 24; dogAge = 24)`, () => {
+  test(`Function should return [2, 2] if catAge = 24 and dogAge = 24`, () => {
     const catAge = 24;
     const dogAge = 24;
 
@@ -57,8 +43,7 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test(`Function should return [8, 7]
-  if cat's and dog's age >= 24 (catAge = 50; dogAge = 50)`, () => {
+  test(`Function should return [8, 7] if catAge = 50 and dogAge = 50`, () => {
     const catAge = 50;
     const dogAge = 50;
 
