@@ -10,7 +10,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should return zeros if cats age and dogs age < 15', () => {
+  test('should return zeros if cats age = 7 and dogs age = 11', () => {
     const catAge = 7;
     const dogAge = 11;
 
@@ -31,7 +31,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge(catAge, dogAge)).toStrictEqual([1, 1]);
   });
 
-  test('should return [1, 1] if cats age and dogs age > 15 and < 24', () => {
+  test('should return [1, 1] if cats age = 20 and dogs age = 24', () => {
     const catAge = 20;
     const dogAge = 16;
 
@@ -52,9 +52,9 @@ describe('getHumanAge', () => {
     expect(getHumanAge(catAge, dogAge)).toStrictEqual([2, 2]);
   });
 
-  test('should return [2, 2] if cats age < 28 and dogs age < 29', () => {
-    const catAge = 27;
-    const dogAge = 28;
+  test('should return [2, 2] if cats age = 26 and dogs age = 27', () => {
+    const catAge = 26;
+    const dogAge = 27;
 
     expect(getHumanAge(catAge, dogAge)).toStrictEqual([2, 2]);
   });
@@ -80,14 +80,14 @@ describe('getHumanAge', () => {
     expect(getHumanAge(catAge, dogAge)).toStrictEqual([3, 3]);
   });
 
-  test('should return [3, 3] if cats age < 32 and dogs age < 34', () => {
+  test('should return [3, 3] if cats age = 31 and dogs age = 33', () => {
     const catAge = 31;
-    const dogAge = 30;
+    const dogAge = 33;
 
     expect(getHumanAge(catAge, dogAge)).toStrictEqual([3, 3]);
   });
 
-  test('should return digit array, if cats age and dogs age are 3-dgt', () => {
+  test('should return digit array, if cats age and dogs age = 100', () => {
     const catAge = 100;
     const dogAge = 100;
 
