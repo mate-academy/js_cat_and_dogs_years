@@ -6,38 +6,37 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('catAge and dogAge should return [0,0] if humanAge is 0 for both', () => {
+  test('should return [0,0] if inputs are (0,0)', () => {
     expect(getHumanAge(0,0))
     .toEqual([0, 0])
   })
 
-  test('animalAge should return [2,0] if humanAge is 24 for catAgeAge and 0 for dogAge', () => {
+  test('should return [2,0] if inputs are (25,0)', () => {
     expect(getHumanAge(25,0))
     .toEqual([2, 0])
   })
 
-  test(`animalAge should return [0,4] if humanAge is 0 for catAge and 34 for dogAge`, () => {
+  test(`should return [0,4] if inputs are (0,34)`, () => {
     expect(getHumanAge(0,34))
     .toEqual([0, 4])
   })
 
-  test('animalAge should return [1,1] if humanAge is 15 for both', () => {
+  test('should return [1,1] if inputs are (15,15)', () => {
     expect(getHumanAge(15,15))
     .toEqual([1, 1])
   })
 
-  test(`animalAge should return [2,2] if humanAge is 24 for cat and 26 for dog`, () => {
+  test(`should return [2,2] if if inputs are (24,26)`, () => {
     expect(getHumanAge(24,26))
     .toEqual([2, 2])
   })
 
-  test(`animalAge should return [3,3] if humanAge is 28 for cat and 29 
-  for dog`, () => {
+  test(`should return [3,3] if inputs are (28,29) `, () => {
     expect(getHumanAge(28,29))
     .toEqual([3,3])
   })
 
-  test('animalAge should return [18,15] when humanAge = 90 for both', () => {
+  test('should return [18,15] if inputs are (90,90)', () => {
     expect(getHumanAge(90,90))
     .toEqual([18,15])
   })
