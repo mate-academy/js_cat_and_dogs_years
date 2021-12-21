@@ -1,10 +1,13 @@
+'use strict';
+
 /**
  * @param {number} catAge
  * @param {number} dogAge
  *
  * @returns {number[]}
  */
- function getHumanAge(catAge, dogAge) {
+
+function getHumanAge(catAge, dogAge) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
   const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
 
