@@ -1,4 +1,6 @@
-/**
+'use strict'; 
+
+ /**
  * @param {number} catAge
  * @param {number} dogAge
  *
