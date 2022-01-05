@@ -12,7 +12,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge(1, 2)).toBeInstanceOf(Array);
   });
 
-  test(`should convert ages if cat and dog are younger than 15 years old`,
+  test(`should convert ages if cat and dog are equal 0`,
     () => {
       expect(getHumanAge(0, 0)).toEqual([0, 0]);
     });
@@ -40,11 +40,15 @@ describe('getHumanAge', () => {
       expect(getHumanAge(27, 27)).toEqual([2, 2]);
     });
 
-  test(`should convert ages if cat and dog are equal to 28 years old`, () => {
+  test(`should convert ages  if cat and dog are equal to 28 years old`, () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
-  test(`should convert ages if cat and dog  more than 28 years old`, () => {
+  test(`should convert ages if cat and dog are equal to 29 years old`, () => {
+    expect(getHumanAge(29, 29)).toEqual([3, 3]);
+  });
+
+  test(`should convert ages if cat and dog  more than 29 years old`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
