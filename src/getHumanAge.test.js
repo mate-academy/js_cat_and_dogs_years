@@ -20,7 +20,7 @@ describe('getHumanAge', () => {
   });
 
   test(`should return age of pets in human years:
-  cat 0 years, dog 0 years, when input is (0, 0)`, () => {
+  cat 0 years, dog 0 years, when input is (14, 14)`, () => {
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
   });
