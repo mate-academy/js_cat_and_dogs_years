@@ -6,5 +6,13 @@ module.exports = {
   rules: {
     'no-proto': 0
   },
-  plugins: ['jest']
+  plugins: ['jest'],
+  overrides: [
+    {
+      files: ["*.js"],
+      rules: {
+        'max-len': 'off' // disables line length check
+      }
+    }
+  ]
 };
