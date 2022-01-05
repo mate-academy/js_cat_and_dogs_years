@@ -33,12 +33,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test(`should return [2, 2] when input is (24, 24)`, () => {
-    expect(getHumanAge(24, 24))
-      .toEqual([2, 2]);
-  });
-
-  test(`should return [2, 2] when input is (24, 24)`, () => {
+  test(`should return [2, 2] when input is (27, 27)`, () => {
     expect(getHumanAge(27, 27))
       .toEqual([2, 2]);
   });
