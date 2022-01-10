@@ -8,12 +8,6 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test(`should return NaN for cat and dog when
-  input data != number`, () => {
-    expect(getHumanAge('!= number', '!= number'))
-      .toEqual([NaN, NaN]);
-  });
-
   test(`should return 0 when HumanAge < -15`, () => {
     expect(getHumanAge(-16, -16))
       .toEqual([0, 0]);
