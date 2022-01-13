@@ -28,27 +28,27 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`should return '[1, 1]' for param [15, 15]`, () => {
+  test(`men year: '[1, 1]' for param [cat = 15, dog = 15]`, () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test(`should return '[2, 2]' for param [24, 24]`, () => {
+  test(`men year: '[2, 2]' for param [cat = 24, dog = 24]`, () => {
     expect(getHumanAge(24, 24))
       .toEqual([2, 2]);
   });
 
-  test(`should return '[3, 3]' for param [28, 29]`, () => {
+  test(`men year: '[3, 3]' for param [cat = 28, dog = 29]`, () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
 
-  test(`should return '[3, 3]' for param [35, 35]`, () => {
+  test(`men year '[3, 3]' for param [cat = 35, dog = 35]`, () => {
     expect(getHumanAge(35, 35))
       .toEqual([4, 4]);
   });
 
-  test(`should return [21, 17] for param [100, 100]`, () => {
+  test(`men year: [21, 17] for param [cat = 100, dog = 100]`, () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
@@ -56,4 +56,4 @@ describe('getHumanAge', () => {
 // when pats 100 years old
 // thrird pets year === 3 cat/people, 4 dog/people
 // second pets year ===  9 people
-// first pets year === 1 people
+// first pets year === 15 people
