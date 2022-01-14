@@ -48,7 +48,7 @@ describe('getHumanAge', () => {
       .toEqual([4, 4]);
   });
 
-  test(`men year: [21, 17] for param catAge = 100, dogAge = 100]`, () => {
+  test(`men year: [21, 17] for param catAge = 100, dogAge = 100`, () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
