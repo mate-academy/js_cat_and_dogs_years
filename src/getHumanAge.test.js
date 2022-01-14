@@ -28,27 +28,27 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`men year: '[1, 1]' for param [cat = 15, dog = 15]`, () => {
+  test(`men year: '[1, 1]' for param catAge = 15, dogAge = 15`, () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test(`men year: '[2, 2]' for param [cat = 24, dog = 24]`, () => {
+  test(`men year: '[2, 2]' for param catAge = 24, dogAge = 24`, () => {
     expect(getHumanAge(24, 24))
       .toEqual([2, 2]);
   });
 
-  test(`men year: '[3, 3]' for param [cat = 28, dog = 29]`, () => {
+  test(`men year: '[3, 3]' for param catAge = 28, dogAge = 29`, () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
 
-  test(`men year '[3, 3]' for param [cat = 35, dog = 35]`, () => {
+  test(`men year '[3, 3]' for param catAge = 35, dogAge = 35`, () => {
     expect(getHumanAge(35, 35))
       .toEqual([4, 4]);
   });
 
-  test(`men year: [21, 17] for param [cat = 100, dog = 100]`, () => {
+  test(`men year: [21, 17] for param catAge = 100, dogAge = 100]`, () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
