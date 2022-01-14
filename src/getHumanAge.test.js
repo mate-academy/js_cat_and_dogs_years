@@ -1,3 +1,5 @@
+'use strict';
+
 describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
