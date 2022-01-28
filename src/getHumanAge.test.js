@@ -44,7 +44,8 @@ describe('getHumanAge', () => {
   });
 
   test('should return 3 for 28 cat years and  29 dog years', () => {
-    expect(JSON.stringify(getHumanAge(28, 29))).toBe(JSON.stringify([3, 3]));
+    expect(getHumanAge(28, 29))
+      .toEqual([3, 3]);
   });
 
   test('should return expected ages', () => {
