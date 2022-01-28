@@ -13,7 +13,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Array);
   });
 
-  test('should return 0 for inputs 0', () => {
+  test('should return [0, 0] for inputs (0, 0)', () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
