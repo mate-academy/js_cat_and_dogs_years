@@ -38,12 +38,12 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test('should return 3 for 28 cat years and 2 for 28 dog years', () => {
+  test('should return [3, 2] for inputs equal 28', () => {
     expect(getHumanAge(28, 28))
       .toEqual([3, 2]);
   });
 
-  test('should return 3 for 28 cat years and  29 dog years', () => {
+  test('should return [3, 3] for 28 cat years and 29 dog years', () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
