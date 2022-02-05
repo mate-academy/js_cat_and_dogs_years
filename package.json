@@ -23,5 +23,8 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
+  },
+  "dependencies": {
+    "@types/jest": "^27.4.0"
   }
 }
