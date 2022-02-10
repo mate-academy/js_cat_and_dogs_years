@@ -25,7 +25,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return 1 for input less than 24', () => {
-    expect(getHumanAge(20, 20)).toEqual([1, 1]);
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
   test('should return 2 for input 24', () => {
