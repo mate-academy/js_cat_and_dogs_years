@@ -1,7 +1,7 @@
 'use strict';
 
 describe('getHumanAge', () => {
-  const { getHumanAge, getHumanAge } = require('./getHumanAge');
+  const { getHumanAge } = require('./getHumanAge');
 
   test('should be declared', () => {
     expect(getHumanAge)
@@ -47,5 +47,6 @@ describe('getHumanAge', () => {
     expected(getHumanAge([100,100]))
       .toEqual([21,17]);
   });
+
 });
 
