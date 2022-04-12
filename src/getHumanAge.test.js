@@ -8,6 +8,11 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
+  it('should return an array', () => {
+    expect(getHumanAge())
+      .toBeInstanceOf(Array);
+  });
+
   it('should return an array with 2 elements', () => {
     expect(getHumanAge(0, 0))
       .toHaveLength(2);
