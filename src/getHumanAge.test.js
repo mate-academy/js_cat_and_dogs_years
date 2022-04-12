@@ -20,7 +20,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  it('should return [1, 1] if catAge = 15 and dogAge = 15', () => {
+  it('should return [1, 1] if catAge = 23 and dogAge = 23', () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
