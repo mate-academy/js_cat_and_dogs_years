@@ -27,20 +27,14 @@ describe('getHumanAge', () => {
   });
 
   test(`should return 2 life per dog or cat
-    if cat's value is from 24 to 27,
-     dog's value is from 24 to 28 inclusive`, () => {
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
-  });
-
-  test(`should return 2 life per dog or cat
     if cat's value is from 24 to 28,
     dog's value is from 24 to 27 inclusive`, () => {
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+    expect(getHumanAge(24, 26)).toEqual([2, 2]);
   });
 
-  test(`should return 4 if the cat has a value of 28,
-  the dog has 27 and add one each for the next 4 years for a cat
-  and 5 years for a dog`, () => {
+  test(`should return 4 if the cat or dog value is 24,
+  add one for every next 4 years for the cat
+  add one for every next 5 years for the dog`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
