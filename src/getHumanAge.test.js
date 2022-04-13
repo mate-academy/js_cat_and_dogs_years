@@ -20,24 +20,6 @@ describe('getHumanAge', () => {
     expect(actual).toEqual([0, 0]);
   });
 
-  test('should work only with positive numbers', () => {
-    const actual = getHumanAge(-2, -12);
-
-    expect(actual).toEqual([0, 0]);
-  });
-
-  test('should return NaN if input is not a number', () => {
-    const actual = getHumanAge('qwe', 15);
-
-    expect(actual).toEqual([NaN, 1]);
-  });
-
-  test('should return NaN if input is not passed', () => {
-    const actual = getHumanAge(15);
-
-    expect(actual).toEqual([1, NaN]);
-  });
-
   test('should return [1, 2] if catAge = 15 and dogAge = 25', () => {
     const actual = getHumanAge(15, 25);
 
@@ -54,11 +36,5 @@ describe('getHumanAge', () => {
     const actual = getHumanAge(100, 100);
 
     expect(actual).toEqual([21, 17]);
-  });
-
-  test('should round the number down if the number is not an integer', () => {
-    const actual = getHumanAge(15.15, 0);
-
-    expect(actual).toEqual([1, 0]);
   });
 });
