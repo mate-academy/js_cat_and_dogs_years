@@ -8,9 +8,9 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should be an object', () => {
-    expect(typeof getHumanAge(15, 16))
-      .toEqual('object');
+  test('should return an array', () => {
+    expect(getHumanAge(15, 16))
+      .toBeInstanceOf(Array);
   });
 
   test(`should replace 15 full cat and dog years with 1 human years`, () => {
@@ -37,9 +37,5 @@ describe('getHumanAge', () => {
   test(`should replace from 0 to 14 dog and cat years 
   with 0 human years`, () => {
     expect(getHumanAge(0, 5)).toEqual([0, 0]);
-  });
-
-  test(`should return NaN if there is empty array`, () => {
-    expect(getHumanAge()).toEqual([NaN, NaN]);
   });
 });
