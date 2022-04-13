@@ -16,14 +16,6 @@ describe('getHumanAge', () => {
     expect(getHumanAge(8, 14)).toEqual([0, 0]);
   });
 
-  test('should return [0, 0], when ages inputs are negative', () => {
-    expect(getHumanAge(-12, -100)).toEqual([0, 0]);
-  });
-
-  test('should rounded, when ages inputs are non-integer numbers', () => {
-    expect(getHumanAge(130.4, 1412.412)).toEqual([28, 279]);
-  });
-
   test('should return [1, 1] for ages between 15 and 23', () => {
     expect(getHumanAge(15, 23)).toEqual([1, 1]);
   });
