@@ -21,20 +21,15 @@ describe('getHumanAge', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  test(`should return 1 life for a dog or cat
-  if their value is from 15 to 23 inclusive`, () => {
+  test(`should return [1, 1] when input values are (23, 23)`, () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
-  test(`should return 2 life per dog or cat
-    if cat's value is from 24 to 28,
-    dog's value is from 24 to 27 inclusive`, () => {
+  test(`should return [2, 2] when input values are (24, 26)`, () => {
     expect(getHumanAge(24, 26)).toEqual([2, 2]);
   });
 
-  test(`should return 4 if the cat or dog value is 24,
-  add one for every next 4 years for the cat
-  add one for every next 5 years for the dog`, () => {
+  test(`should return [21, 17] when input values are (100, 100)`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
