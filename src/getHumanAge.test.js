@@ -8,6 +8,21 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
+  test('return NaN for not numbers', () => {
+    expect(getHumanAge('.', '*'))
+      .toEqual([NaN, NaN]);
+  });
+
+  test('return 0 for invalid input', () => {
+    expect(getHumanAge(-1, -3))
+      .toEqual([0, 0]);
+  });
+
+  test('return NaN for empty function', () => {
+    expect(getHumanAge())
+      .toEqual([NaN, NaN]);
+  });
+
   test('return 0 if age less than 15', () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
