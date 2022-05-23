@@ -56,4 +56,16 @@ describe('getHumanAge', () => {
       expect(getHumanAge(100, 100))
         .toEqual([21, 17]);
     });
+
+  test(`should return the human age = NaN when the dog and cat age are letters`,
+    () => {
+      expect(getHumanAge('a', 'b'))
+        .toEqual([NaN, NaN]);
+    });
+
+  test(`should return the human age = 0 
+  when the dog and cat age are negative numbers`, () => {
+    expect(getHumanAge(-2, -5))
+      .toEqual([0, 0]);
+  });
 });
