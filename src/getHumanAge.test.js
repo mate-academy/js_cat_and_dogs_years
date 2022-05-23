@@ -13,6 +13,16 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
+  test('should return NaN for not numbers', () => {
+    expect(getHumanAge('c', '+'))
+      .toEqual([NaN, NaN]);
+  });
+
+  test('should return 0 for negative numbers', () => {
+    expect(getHumanAge(-1, -1))
+      .toEqual([0, 0]);
+  });
+
   test('should return 0 humanAge, if animalAge < 15', () => {
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
