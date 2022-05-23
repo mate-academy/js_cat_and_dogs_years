@@ -8,12 +8,22 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
+  test(`if animalAge equal negative number should return 0 human year`
+    , () => {
+      expect(getHumanAge(-5, -20)).toEqual([0, 0]);
+    });
+
+  test(`if animalAge type is not a number should return NaN`
+    , () => {
+      expect(getHumanAge('ab', '@!')).toEqual([NaN, NaN]);
+    });
+
   test(`if animalAge equal '0' should return 0 human year`
     , () => {
       expect(getHumanAge(0, 0)).toEqual([0, 0]);
     });
 
-  test(`if animalAge less then '15' should return 1 human year`
+  test(`if animalAge < '15' should return 1 human year`
     , () => {
       expect(getHumanAge(14, 14)).toEqual([0, 0]);
     });
@@ -23,7 +33,7 @@ describe('getHumanAge', () => {
       expect(getHumanAge(15, 15)).toEqual([1, 1]);
     });
 
-  test(`if animalAge less then '24' should return 1 human year`
+  test(`if animalAge < '24' should return 1 human year`
     , () => {
       expect(getHumanAge(23, 23)).toEqual([1, 1]);
     });
@@ -33,14 +43,14 @@ describe('getHumanAge', () => {
       expect(getHumanAge(24, 24)).toEqual([2, 2]);
     });
 
-  test(`if Cat yearsAge less then '28' and Dog years less then '28'
+  test(`if Cat yearsAge < '28' and Dog years < '28'
   should return 2 human year`
   , () => {
     expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
-  test(`if Cat yearsAge equal '28' and Dog years less then '29'
-  should return 3 and 2 human years`
+  test(`if Cat yearsAge equal '28' should return 3 human years
+  and Dog years < '29' should return 2 human years`
   , () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
