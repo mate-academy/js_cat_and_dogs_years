@@ -40,6 +40,6 @@ describe('getHumanAge', () => {
 
   test(`should return [21, 17] when input is '100, 100'`, () => {
     expect(getHumanAge(100, 100))
-      .toStrictEqual([21, 17]);
+      .toStrictEqual([21, 17]);//
   });
 });
