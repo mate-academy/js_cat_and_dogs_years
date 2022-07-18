@@ -51,4 +51,4 @@ describe('getHumanAge', () => {
   test('catToHuman is [21], dogToHuman is [17] if ages are 100', () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
-} );
+} )
