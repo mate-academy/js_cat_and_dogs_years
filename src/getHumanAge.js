@@ -22,7 +22,9 @@ function convertToHuman(animalAge, first, second, other) {
     return 1;
   }
 
-  return 2 + Math.floor((animalAge - first - second) / other);
+  const goals = 2 + Math.floor((animalAge - first - second) / other);
+
+  return goals;
 }
 
 module.exports = { getHumanAge };
