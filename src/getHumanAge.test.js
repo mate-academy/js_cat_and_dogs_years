@@ -26,7 +26,7 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 0]);
   });
 
-  test('should return 0, when input is empty', () => {
+  test('should return 0, when input contains 0', () => {
     const result = getHumanAge(0, 0);
 
     expect(result).toEqual([0, 0]);
