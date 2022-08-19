@@ -23,7 +23,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return the correct value if'
-  + 'less than 15 dogs year is passed', () => {
+  + ' less than 15 dogs year is passed', () => {
     const result = getHumanAge(19, 8);
 
     expect(result)
@@ -31,7 +31,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return the correct value if'
-    + 'less than 15 cats year is passed', () => {
+    + ' less than 15 cats year is passed', () => {
     const result = getHumanAge(1, 16);
 
     expect(result)
@@ -39,7 +39,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return the correct value if'
-    + 'dogs age is >= 15 and < 24', () => {
+    + ' dogs age is >= 15 and < 24', () => {
     const result = getHumanAge(24, 17);
 
     expect(result)
@@ -47,7 +47,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return the correct value if'
-    + 'cats age is >= 15 and < 24', () => {
+    + ' cats age is >= 15 and < 24', () => {
     const result = getHumanAge(20, 24);
 
     expect(result)
@@ -55,7 +55,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return the correct value if'
-    + 'cats and dogs years more than 24', () => {
+    + ' cats and dogs years more than 24', () => {
     const result = getHumanAge(94, 73);
 
     expect(result)
