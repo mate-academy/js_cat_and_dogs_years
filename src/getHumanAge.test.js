@@ -30,7 +30,8 @@ describe('getHumanAge', () => {
     expect(getHumanAge(28)[1])
       .toEqual(NaN);
   });
-
+  
+describe('should test random inputs', () => {
  test(`should return '[0, 0]' for 0, 0 input`, () => {
     let age = getHumanAge(0, 0);
 
@@ -72,4 +73,5 @@ describe('getHumanAge', () => {
    let age = getHumanAge(100, 100);
     expect(age).toEqual([21, 17]);
   })
+ });
 });
