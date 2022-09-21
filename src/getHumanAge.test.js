@@ -8,6 +8,20 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
+  test('expect NaN if no arguments', () => {
+    const years = getHumanAge();
+
+    expect(years[0]).toBeNaN();
+    expect(years[1]).toBeNaN();
+  });
+
+  test('expect NaN if string years', () => {
+    const years = getHumanAge('a', 'b');
+
+    expect(years[0]).toBeNaN();
+    expect(years[1]).toBeNaN();
+  });
+
   test('0 cat/dog years should return 0 human years', () => {
     const years = getHumanAge(0, 0);
 
