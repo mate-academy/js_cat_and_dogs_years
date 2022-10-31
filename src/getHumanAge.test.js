@@ -35,4 +35,12 @@ describe('getHumanAge', () => {
   test(`should return NaN if parameter is absent`, () => {
     expect(getHumanAge(55)).toEqual([9, NaN]);
   });
+
+  test(`should return [3, 2] if input is 28, 28`, () => {
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+  });
+
+  test(`should return [3, 3] if input is 28, 29`, () => {
+    expect(getHumanAge(28, 29)).toEqual([3, 3]);
+  });
 });
