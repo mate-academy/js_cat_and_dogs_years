@@ -77,6 +77,11 @@ describe('getHumanAge', () => {
       .toEqual([0, 2]);
   });
 
+  test('should return 21 for cat and 17 for dog if age 100', () => {
+    expect(getHumanAge(100, 100))
+     .toEqual([21, 17]);
+  });
+
   test(`should return [NaN, NaN] if type of variables equal 'string'`, () => {
     expect(getHumanAge('one', 'two'))
       .toEqual([NaN, NaN]);
