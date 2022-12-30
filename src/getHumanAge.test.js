@@ -62,4 +62,9 @@ describe('getHumanAge', () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
+
+  test(`'getHumanAge' function should return an array`, () => {
+    expect(getHumanAge(100, 100))
+      .toBeInstanceOf(Array);
+  });
 });
