@@ -57,14 +57,14 @@ describe('getHumanAge', () => {
       .toEqual([3, 2]);
   });
 
-  test('should return [3, 3] if arguments equal (28, 28)', () => {
+  test('should return [3, 3] if arguments equal (28, 29)', () => {
     const petsAge = getHumanAge(28, 29);
 
     expect(petsAge)
       .toEqual([3, 3]);
   });
 
-  test('should return [3, 3] if arguments equal (100, 100)', () => {
+  test('should return [21, 17] if arguments equal (100, 100)', () => {
     const petsAge = getHumanAge(100, 100);
 
     expect(petsAge)
