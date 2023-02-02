@@ -9,7 +9,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return zero if the value is 0 or less than 15', () => {
-    expect(getHumanAge(0, 13))
+    expect(getHumanAge(0, 14))
       .toEqual([0, 0]);
   });
 
@@ -18,9 +18,19 @@ describe('getHumanAge', () => {
       .toEqual([0, 1]);
   });
 
+  test('should return correct results for values 15 and 16', () => {
+    expect(getHumanAge(15, 16))
+      .toEqual([1, 1]);
+  });
+
   test('should return correct results for values 23 and 24', () => {
     expect(getHumanAge(23, 24))
       .toEqual([1, 2]);
+  });
+
+  test('should return correct results for values 27', () => {
+    expect(getHumanAge(27, 27))
+      .toEqual([2, 2]);
   });
 
   test('should return different results if both values are 28', () => {
