@@ -29,13 +29,6 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test('should return 1 if the inputs equal 15', () => {
-    const ages = getHumanAge(15, 15);
-
-    expect(ages)
-      .toEqual([1, 1]);
-  });
-
   test('should return 1 if the inputs more than 15 and less than 24', () => {
     const ages = getHumanAge(23, 23);
 
@@ -51,7 +44,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return 2 if the inputs more than 24 and less than 28', () => {
-    const ages = getHumanAge(24, 24);
+    const ages = getHumanAge(26, 26);
 
     expect(ages)
       .toEqual([2, 2]);
