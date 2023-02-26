@@ -15,7 +15,7 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test('should return 0 if both arguments 1-15 animal years', () => {
+  test('should return 0 if both arguments 1-14 animal years', () => {
     const goals = getHumanAge(10, 10);
 
     expect(goals)
