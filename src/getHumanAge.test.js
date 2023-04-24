@@ -43,12 +43,12 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test('Every 4 years after 24 catsYears give 1 extra humanYear', () => {
+  test('Every 4 years, after 24, catsYears give 1 extra humanYear', () => {
     expect(getHumanAge(28, 28))
       .toEqual([3, 2]);
   });
 
-  test('Every 5 years after 24 dogsYears give 1 extra human year', () => {
+  test('Every 5 years, after 24, dogsYears give 1 extra humanTear', () => {
     expect(getHumanAge(29, 29))
       .toEqual([3, 3]);
   });
