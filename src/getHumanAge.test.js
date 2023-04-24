@@ -13,12 +13,12 @@ describe(`getHumanAge`, () => {
       .toEqual([0, 0]);
   });
 
-  test(`should return 1 if inputs are 15-24`, () => {
+  test(`should return 1 if inputs are 15-23`, () => {
     expect(getHumanAge(17, 19))
       .toEqual([1, 1]);
   });
 
-  test(`should return 2 if inputs are 24-28`, () => {
+  test(`should return 2 if inputs are 24-27`, () => {
     expect(getHumanAge(25, 25))
       .toEqual([2, 2]);
   });
