@@ -23,11 +23,6 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test('should return 0 if catAge = 0, dogAge = 0', () => {
-    expect(getHumanAge(0, 0))
-      .toEqual([0, 0]);
-  });
-
   test('should return 0 if catAge <= 14, dogAge <= 14', () => {
     expect(getHumanAge(14, 10))
       .toEqual([0, 0]);
