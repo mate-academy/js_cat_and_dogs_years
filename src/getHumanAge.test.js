@@ -18,31 +18,30 @@ describe('getHumanAge', () => {
       .toHaveLength(2);
   });
 
-  test(`should return human age
-    for both cat and dog as 0 if their age is 0`, () => {
+  test(`should return 0 if their age is 0`, () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
 
-  test(`should return human age for both cat and dog as 0
+  test(`should return 0
     if both catAge and dogAge are less than or equal to 14`, () => {
     expect(getHumanAge(13, 14))
       .toEqual([0, 0]);
   });
 
-  test(`should return correct human ages if both
+  test(`should return 1 if both
     catAge and doqAge are between 15 and 23`, () => {
     expect(getHumanAge(15, 23))
       .toEqual([1, 1]);
   });
 
-  test(`should return correct human ages if both
+  test(`should return 2 if both
     catAge and doqAge are between 24 and 27`, () => {
     expect(getHumanAge(24, 27))
       .toEqual([2, 2]);
   });
 
-  test(`should return correct human ages if both
+  test(`should return 3 for cats age and 2 for dogs age if both
     catAge and doqAge are between 28 and 29`, () => {
     expect(getHumanAge(28, 28))
       .toEqual([3, 2]);
