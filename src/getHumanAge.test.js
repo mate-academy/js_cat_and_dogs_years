@@ -8,7 +8,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should be 0 human year if animalAge < 15', () => {
+  test('should return 0 human year if animalAge < 15', () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
 
@@ -25,6 +25,9 @@ describe('getHumanAge', () => {
   });
 
   test('should be catAge +1 every 4 years and dogAGe +1 every 5 years', () => {
+    expect(getHumanAge(24, 24))
+      .toEqual([2, 2]);
+
     expect(getHumanAge(50, 50))
       .toEqual([8, 7]);
 
