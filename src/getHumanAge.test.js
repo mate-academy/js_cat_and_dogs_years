@@ -53,7 +53,7 @@ describe('getHumanAge', () => {
       .toStrictEqual([3, 2]);
   });
 
-  test(`should return [21, 27] if cat and dog are 100 years old`, () => {
+  test(`should return [21, 17] if cat and dog are 100 years old`, () => {
     expect(getHumanAge(100, 100))
       .toStrictEqual([21, 17]);
   });
