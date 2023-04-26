@@ -13,17 +13,27 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
+  test('should return 0 humanYear when animals age < 14', () => {
+    expect(getHumanAge(13, 13))
+      .toEqual([0, 0]);
+  });
+
   test('should return 0 humanYear when animals age <= 14', () => {
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
   });
 
-  test('should return 1 humanYear when animals age > 14 and <= 23', () => {
+  test('should return 1 humanYear when animals age > 14', () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test('should return 1 humanYear when animals age > 14 and <= 23', () => {
+  test('should return 1 humanYear when animals age < 22', () => {
+    expect(getHumanAge(22, 22))
+      .toEqual([1, 1]);
+  });
+
+  test('should return 1 humanYear when animals age <= 23', () => {
     expect(getHumanAge(23, 23))
       .toEqual([1, 1]);
   });
@@ -48,7 +58,7 @@ describe('getHumanAge', () => {
       .toEqual([3, 2]);
   });
 
-  test('Every 5 years, after 24, dogsYears give 1 extra humanTear', () => {
+  test('Every 5 years, after 24, dogsYears give 1 extra humanYear', () => {
     expect(getHumanAge(29, 29))
       .toEqual([3, 3]);
   });
