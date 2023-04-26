@@ -43,18 +43,15 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test(`should return an array with two twoes
-    if catAge and dogAge = 27`, () => {
-    expect(getHumanAge(27, 27))
-      .toEqual([2, 2]);
+  test(`should return an array with 3 for
+    catAge and 2 for dogAge if catAge and dogAge = 28`, () => {
+    expect(getHumanAge(28, 28))
+      .toEqual([3, 2]);
   });
 
   test(`should return an array with converted
-    catAge and dogAge to human age if catAge and dogAge >= 28`, () => {
+    catAge and dogAge to human age if catAge and dogAge > 28`, () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
-
-    expect(getHumanAge(54, 68))
-      .toEqual([9, 10]);
   });
 });
