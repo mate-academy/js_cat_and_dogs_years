@@ -18,16 +18,18 @@ describe('getHumanAge', () => {
 
   test(`should return 1 for (15 <= catsAge < 24) 
   and (15 <= dogsAge < 24)`, () => {
-    expect(getHumanAge(15, 23)).toEqual([1, 1]);
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
   test(`should return 2 for (25 <= catsAge < 28) 
   and (25 <= dogsAge < 29)`, () => {
+    expect(getHumanAge(25, 25)).toEqual([2, 2]);
     expect(getHumanAge(27, 28)).toEqual([2, 2]);
   });
 
-  test(`should return 8 for catsAge = 50 
-  and 12 for dogsAge = 75)`, () => {
+  test(`should add 1 extra human year for every 4 next cat years
+  and every 5 next dog years for catsAge >= 28 and dogsAge >= 29`, () => {
     expect(getHumanAge(50, 75)).toEqual([8, 12]);
   });
 });
