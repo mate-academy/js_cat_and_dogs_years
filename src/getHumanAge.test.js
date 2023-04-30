@@ -22,9 +22,9 @@ describe('getHumanAge', () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
-  test(`should return 2 for (25 <= catsAge < 28) 
-  and (25 <= dogsAge < 29)`, () => {
-    expect(getHumanAge(25, 25)).toEqual([2, 2]);
+  test(`should return 2 for (24 <= catsAge < 28) 
+  and (24 <= dogsAge < 29)`, () => {
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
     expect(getHumanAge(27, 28)).toEqual([2, 2]);
   });
 
