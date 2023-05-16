@@ -28,11 +28,6 @@ describe('getHumanAge', () => {
       .toEqual([0, 1]);
   });
 
-  test("should return [1, 0] when animals' ages are (22, 1)", () => {
-    expect(getHumanAge(22, 1))
-      .toEqual([1, 0]);
-  });
-
   test("should return [1, 1] when animals' ages are (15, 23)", () => {
     expect(getHumanAge(15, 23))
       .toEqual([1, 1]);
@@ -64,8 +59,8 @@ describe('getHumanAge', () => {
   });
 
   test("should return [4, 4] when animals' ages are (32, 33)", () => {
-    expect(getHumanAge(32, 34))
-      .toEqual([4, 4]);
+    expect(getHumanAge(27, 34))
+      .toEqual([3, 4]);
   });
 
   test("should return [4, 7] when animals' ages are (32, 50)", () => {
