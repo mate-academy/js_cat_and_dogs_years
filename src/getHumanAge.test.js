@@ -6,10 +6,10 @@ describe('getHumanAge', () => {
   test('should be declared', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
-});
 
-describe('convertToHuman', () => {
-  test('should convert cat and dog ages to human years correctly', () => {
+  
+  
+test('should convert cat and dog ages to human years correctly', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
