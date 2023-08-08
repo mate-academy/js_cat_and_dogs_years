@@ -36,12 +36,19 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test('returned cat age should be bigger than dog age', () => {
+  test('cat age should be greater when age above 27', () => {
     const result = getHumanAge(28, 28);
     const catAge = result[0];
     const dogAge = result[1];
 
     expect(catAge)
       .toBeGreaterThan(dogAge);
+  });
+
+  test('returned correct age values', () => {
+    const result = getHumanAge(100, 100);
+
+    expect(result)
+      .toEqual([21, 17]);
   });
 });
