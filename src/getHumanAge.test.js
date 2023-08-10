@@ -4,7 +4,7 @@ describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
   // below are postive tests for EC and BV test designs
-  // including different values =)
+  // including different values=)
   test('check if 0, 0 inputs give 0,0 output', () => {
     const humanAges = getHumanAge(0, 0);
 
