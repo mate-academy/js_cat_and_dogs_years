@@ -82,4 +82,25 @@ describe('getHumanAge', () => {
     expect(humanAges)
       .toEqual([0, 0]);
   });
+
+  test('check if function accepts more than 2 arguments)', () => {
+    const humanAges = getHumanAge(20, 20, 20);
+
+    expect(humanAges)
+      .toEqual([1, 1]);
+  });
+
+  test('check if function accepts blank input)', () => {
+    const humanAges = getHumanAge();
+
+    expect(humanAges)
+      .toEqual([NaN, NaN]);
+  });
+
+  test('check if function accepts big number)', () => {
+    const humanAges = getHumanAge(45345345345345345, 45345345345345345);
+
+    expect(humanAges)
+      .toEqual([11336336336336332, 9069069069069066,]);
+  });
 });
