@@ -8,13 +8,23 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
+  test(`should return array of numbers`, () => {
+    const catAgeMock = null;
+    const dogAgeMock = null;
+    const result = getHumanAge(catAgeMock, dogAgeMock);
+
+    expect(Array.isArray(result)).toBeTruthy();
+    expect(result).toHaveLength(2);
+    expect(result).toEqual([0, 0]);
+  });
+
   test('should return 0 humanAge if input value less than 15 years', () => {
     const catAgeMock = 14;
     const dogAgeMock = 0;
     const result = getHumanAge(catAgeMock, dogAgeMock);
 
     expect(result).toHaveLength(2);
-    expect(result).toStrictEqual([0, 0]);
+    expect(result).toEqual([0, 0]);
   });
 
   test(`should return 1 humanAge
@@ -24,7 +34,7 @@ describe('getHumanAge', () => {
     const result = getHumanAge(catAgeMock, dogAgeMock);
 
     expect(result).toHaveLength(2);
-    expect(result).toStrictEqual([1, 1]);
+    expect(result).toEqual([1, 1]);
   });
 
   test(`should test return 2 humanAge
@@ -34,7 +44,7 @@ describe('getHumanAge', () => {
     const result = getHumanAge(catAgeMock, dogAgeMock);
 
     expect(result).toHaveLength(2);
-    expect(result).toStrictEqual([2, 2]);
+    expect(result).toEqual([2, 2]);
   });
 
   test(`should return one more humanAge
@@ -44,7 +54,7 @@ describe('getHumanAge', () => {
     const result = getHumanAge(catAgeMock, dogAgeMock);
 
     expect(result).toHaveLength(2);
-    expect(result).toStrictEqual([4, 5]);
+    expect(result).toEqual([4, 5]);
   });
 
   test(`should not duplicate human years for each 15/9 years`, () => {
@@ -53,6 +63,6 @@ describe('getHumanAge', () => {
     const result = getHumanAge(catAgeMock, dogAgeMock);
 
     expect(result).toHaveLength(2);
-    expect(result).toStrictEqual([21, 17]);
+    expect(result).toEqual([21, 17]);
   });
 });
