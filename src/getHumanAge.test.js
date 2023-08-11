@@ -5,102 +5,79 @@ describe('getHumanAge', () => {
 
   // below are postive tests for EC and BV test designs
   // including different values=)
-  test('check if 0, 0 inputs give 0,0 output', () => {
-    const humanAges = getHumanAge(0, 0);
-
-    expect(humanAges)
+  test('should return 0 for cat and dog when input is 0', () => {
+    expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
 
-  test('check if 14, 14 input give 0, 0 output', () => {
-    const humanAges = getHumanAge(14, 14);
+  test('should return 0 for cat and dog if they are less than 15 years old',
+    () => {
+      expect(getHumanAge(14, 14))
+        .toEqual([0, 0]);
+    });
 
-    expect(humanAges)
-      .toEqual([0, 0]);
-  });
-
-  test('check if 15, 15 input give 1, 1 output', () => {
-    const humanAges = getHumanAge(15, 15);
-
-    expect(humanAges)
+  test('should return 1 for cat and dog when input is 15', () => {
+    expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test('check if 16, 16 inputs give 1, 1 output', () => {
-    const humanAges = getHumanAge(16, 16);
-
-    expect(humanAges)
+  test('should return 1 for cat and dog when input is 16', () => {
+    expect(getHumanAge(16, 16))
       .toEqual([1, 1]);
   });
 
-  test('check if 24, 24 inputs give 2, 2 output', () => {
-    const humanAges = getHumanAge(24, 24);
-
-    expect(humanAges)
+  test('should return 2 for cat and dog when input is 24', () => {
+    expect(getHumanAge(24, 24))
       .toEqual([2, 2]);
   });
 
-  test('check if 25, 25 inputs give 2, 2 output', () => {
-    const humanAges = getHumanAge(25, 25);
-
-    expect(humanAges)
+  test('should return 2 for cat and dog when input is 25', () => {
+    expect(getHumanAge(25, 25))
       .toEqual([2, 2]);
   });
 
-  test('check if 28, 29 inputs give 3, 3 output', () => {
-    const humanAges = getHumanAge(28, 29);
-
-    expect(humanAges)
+  test('should return 3 for cat and dog when input is 28, 29', () => {
+    expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
 
-  test('check if 29, 30 inputs give 3, 3 output', () => {
-    const humanAges = getHumanAge(29, 30);
-
-    expect(humanAges)
+  test('should return 3 for cat and dog when input is 29, 30', () => {
+    expect(getHumanAge(29, 30))
       .toEqual([3, 3]);
   });
 
-  test('check if 58, 60 inputs give 6, 6 output', () => {
-    const humanAges = getHumanAge(32, 35);
-
-    expect(humanAges)
+  test('should return 4 for cat and dog when input is 32, 35', () => {
+    expect(getHumanAge(32, 35))
       .toEqual([4, 4]);
   });
 
   // below are some negative tests, (hope they check everything) =)
-  test('check if symbols, letter inputs give NaN output', () => {
-    const humanAges = getHumanAge('A#a', 'A#a');
+  test('should return NaN for cat and dog when input is symbols, letter',
+    () => {
+      expect(getHumanAge('A#a', 'A#a'))
+        .toEqual([NaN, NaN]);
+    });
 
-    expect(humanAges)
+  test('should return 0 for cat and dog when input is negative fractions',
+    () => {
+      expect(getHumanAge(-1.2, -1.2))
+        .toEqual([0, 0]);
+    });
+
+  test('should return 1 for cat and dog when input has more than 2 arguments',
+    () => {
+      expect(getHumanAge(20, 20, 20))
+        .toEqual([1, 1]);
+    });
+
+  test('should return NaN for cat and dog when input is blank)', () => {
+    expect(getHumanAge())
       .toEqual([NaN, NaN]);
   });
 
-  test('check if negative fractions inputs give 0, 0 output', () => {
-    const humanAges = getHumanAge(-1.2, -1.2);
-
-    expect(humanAges)
-      .toEqual([0, 0]);
-  });
-
-  test('check if function accepts more than 2 arguments)', () => {
-    const humanAges = getHumanAge(20, 20, 20);
-
-    expect(humanAges)
-      .toEqual([1, 1]);
-  });
-
-  test('check if function accepts blank input)', () => {
-    const humanAges = getHumanAge();
-
-    expect(humanAges)
-      .toEqual([NaN, NaN]);
-  });
-
-  test('check if function accepts big number)', () => {
-    const humanAges = getHumanAge(45345345345345345, 45345345345345345);
-
-    expect(humanAges)
-      .toEqual([11336336336336332, 9069069069069066,]);
-  });
+  test('should return valid output for cat and dog when input is big int',
+    () => {
+      expect(getHumanAge(45345345345345345, 45345345345345345))
+        .toEqual([11336336336336332, 9069069069069066]);
+    });
 });
