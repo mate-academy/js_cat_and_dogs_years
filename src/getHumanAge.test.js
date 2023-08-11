@@ -38,7 +38,7 @@ describe('getHumanAge', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('should correctly convert 24 cat years ', () => {
+  test('should correctly convert 24 cat years', () => {
     const catAge = 24;
     const dogAge = 0;
     const expected = [2, 0];
@@ -48,7 +48,7 @@ describe('getHumanAge', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('should correctly convert every 4 next cat years ', () => {
+  test('should correctly convert every 4 next cat years', () => {
     const catCases = [
       {
         catAge: 28, expectedHumanAge: 3,
@@ -88,7 +88,7 @@ describe('getHumanAge', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('should correctly convert 24 dog years ', () => {
+  test('should correctly convert 24 dog years', () => {
     const catAge = 0;
     const dogAge = 24;
     const expected = [0, 2];
@@ -98,7 +98,7 @@ describe('getHumanAge', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('should correctly convert every 5 next dog years ', () => {
+  test('should correctly convert every 5 next dog years', () => {
     const dogCases = [
       {
         dogAge: 29, expectedHumanAge: 3,
