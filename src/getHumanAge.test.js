@@ -34,10 +34,8 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  // ?
-
-  test('if feline and canine from 15 to 24 years old, then return'
-    + 'the array with two 1', () => {
+  test('more than 24 years then add to 2 for cats every 4 years'
+    + ' for dogs every 5 years 1 year', () => {
     let humanAgeOfPets = getHumanAge(24, 24);
 
     expect(humanAgeOfPets)
