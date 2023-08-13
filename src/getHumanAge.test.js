@@ -21,32 +21,32 @@ describe('getHumanAge', () => {
       .toEqual([0, 0]);
   });
 
-  test(`if parametrs = 15`, () => {
+  test(`if parametrs = 15 should return [1, 1]`, () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test(`if parametrs = 23`, () => {
+  test(`if parametrs = 23 should return [1, 1]`, () => {
     expect(getHumanAge(23, 23))
       .toEqual([1, 1]);
   });
 
-  test(`if parametrs = 24`, () => {
+  test(`if parametrs = 24 should return [2, 2]`, () => {
     expect(getHumanAge(24, 24))
       .toEqual([2, 2]);
   });
 
-  test(`if parametrs = 27`, () => {
+  test(`if parametrs = 27 should return [2, 2]`, () => {
     expect(getHumanAge(27, 27))
       .toEqual([2, 2]);
   });
 
-  test(`if catAge = 28 and dogAge = 29`, () => {
+  test(`if catAge = 28 and dogAge = 29 should return [3, 3]`, () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
   });
 
-  test(`if parametrs = 41`, () => {
+  test(`if parametrs = 41 should return [6, 5]`, () => {
     expect(getHumanAge(41, 41)) // +щоб перевірити чи відкидаємо остачу
       .toEqual([6, 5]);
   });
