@@ -19,8 +19,18 @@ describe('getHumanAge', () => {
   });
 
   test('should return the human age of a cat and dog', () => {
-    expect(getHumanAge(5, 8))
-      .toEqual([0, 0]);
+    expect(getHumanAge(25, 10))
+      .toEqual([2, 0]);
+  });
+
+  test('should return the human age of a cat and dog', () => {
+    expect(getHumanAge(36, 34))
+      .toEqual([5, 4]);
+  });
+
+  test('should handle very large ages', () => {
+    expect(getHumanAge(1000, 1000))
+      .toEqual([246, 197]);
   });
 
   test('should return 0 for cat and 0 for'
