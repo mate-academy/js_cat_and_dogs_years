@@ -33,7 +33,7 @@ describe('getHumanAge', () => {
       .toEqual([1, 1]);
   });
 
-  test('should return 1 if age of cat or dog on range of 15 - 23', () => {
+  test('should return 1 if age of cat and dog on range of 15 - 23', () => {
     expect(getHumanAge(18, 21))
       .toEqual([1, 1]);
   });
