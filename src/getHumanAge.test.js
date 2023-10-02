@@ -43,8 +43,7 @@ describe('getHumanAge', () => {
       .toEqual([5, 4]);
   });
 
-  test('0 cat and dog years should give result [0,0]'
-  + 'dog when ages are less than 15', () => {
+  test('0 cat and dog years should give result [0,0], when ages are less 15', () => {
     expect(getHumanAge(10, 10))
       .toEqual([0, 0]);
   });
