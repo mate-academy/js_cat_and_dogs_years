@@ -37,4 +37,20 @@ describe('getHumanAge', () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
+
+   test('36 cat and 34 dog years should give result [36,34]', () => {
+    expect(getHumanAge(36, 34))
+      .toEqual([5, 4]);
+  });
+
+  test('0 cat and dog years should give result [0,0]'
+  + 'dog when ages are less than 15', () => {
+    expect(getHumanAge(10, 10))
+      .toEqual([0, 0]);
+  });
+
+    test('should handle very large ages', () => {
+    expect(getHumanAge(500, 500))
+      .toEqual([123, 98]);
+  });
 });
