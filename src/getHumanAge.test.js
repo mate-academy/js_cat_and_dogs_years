@@ -15,7 +15,7 @@ describe('getHumanAge', () => {
   });
 
   test ('should return an array with two elements', () => {
-    const result = getHumanAge();
+    const result = getHumanAge(1,1);
     expect(result.length)
     .toBe(2);
   });
@@ -27,7 +27,7 @@ describe('getHumanAge', () => {
     .toEqual([0,0]);
   });
 
-  test ('should return zeros when animals ages are less then 15', () => {
+  test ('should return [0,0] when animals ages are less than 15', () => {
     const result = getHumanAge(14,14);
     expect (result)
     .toEqual([0,0]);
@@ -38,7 +38,7 @@ describe('getHumanAge', () => {
     .toEqual([1,1]);
   });
 
-  test ('should return one year of human when animals ages are less then 24', () => {
+  test ('should return [1,1] when animals ages are less than 24', () => {
     const result = getHumanAge(23,23);
     expect (result)
     .toEqual([1,1]);
@@ -50,7 +50,7 @@ describe('getHumanAge', () => {
     .toEqual([2,2]);
   });
 
-  test ('should return two years of human when animal ages are less then 28', () => {
+  test ('should return [2,2] when animals ages are less than 28', () => {
     const result = getHumanAge(27,27);
     expect(result)
     .toEqual([2,2]);
