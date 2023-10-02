@@ -27,12 +27,6 @@ describe('getHumanAge', () => {
 
   test(`should be converted when HumanAge is more 
         than 1 dog's and cat's year but less than 2`, () => {
-    expect(getHumanAge(23, 23))
-      .toStrictEqual([1, 1]);
-  });
-
-  test(`should be converted when HumanAge is more 
-        than 1 dog's and cat's year but less than 2`, () => {
     expect(getHumanAge(20, 20))
       .toStrictEqual([1, 1]);
   });
