@@ -73,4 +73,16 @@ describe('getHumanAge', () => {
     expect(getHumanAge(45, 50))
       .toStrictEqual([7, 7]);
   });
+
+  test('should return [7, 7] for animals age in'
+  + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
+    expect(getHumanAge(55, 55))
+      .toStrictEqual([9, 8]);
+  });
+
+  test('should return [7, 7] for animals age in'
+  + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
+    expect(getHumanAge(56, 56))
+      .toStrictEqual([10, 8]);
+  });
 });
