@@ -8,86 +8,68 @@ describe('getHumanAge', () => {
       .toStrictEqual([0, 0]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for first 15 years', () => {
+  test('should return [0, 0] for animals age'
+    + 'in human years when animal younger than 15 years', () => {
     expect(getHumanAge(1, 1))
       .toStrictEqual([0, 0]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for first 15 years', () => {
-    expect(getHumanAge(2, 2))
-      .toStrictEqual([0, 0]);
-  });
-
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for first 15 years', () => {
+  test('should return [0, 0] for animals age'
+    + 'in human years when animal younger than 15 years', () => {
     expect(getHumanAge(14, 14))
       .toStrictEqual([0, 0]);
   });
 
-  test('should return cat\'s and dog\'s age'
+  test('should return [1, 1] for animals age'
     + 'in human years for first 15 years', () => {
     expect(getHumanAge(15, 15))
       .toStrictEqual([1, 1]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for first 15 years', () => {
-    expect(getHumanAge(16, 16))
-      .toStrictEqual([1, 1]);
-  });
-
-  test('should return cat\'s and dog\'s age'
+  test('should return [1, 1] for animals age'
     + 'in human years for first 15 years', () => {
     expect(getHumanAge(23, 23))
       .toStrictEqual([1, 1]);
   });
 
-  test('should return cat\'s and dog\'s age'
+  test('should return [2, 2] for animals age'
     + 'in human years for the next 9 years', () => {
     expect(getHumanAge(24, 24))
       .toStrictEqual([2, 2]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the next 9 years', () => {
-    expect(getHumanAge(25, 25))
-      .toStrictEqual([2, 2]);
-  });
-
-  test('should return cat\'s and dog\'s age'
+  test('should return [2, 2] for animals age'
     + 'in human years for the next 9 years', () => {
     expect(getHumanAge(27, 28))
       .toStrictEqual([2, 2]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the every 4 next cat years', () => {
+  test('should return [3, 3] for animals age'
+    + 'in human years for the every 4 next cat\'s years', () => {
     expect(getHumanAge(28, 29))
       .toStrictEqual([3, 3]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the every 4 next cat and 5 next dog years', () => {
+  test('should return [3, 3] for animals age in'
+  + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
     expect(getHumanAge(29, 30))
       .toStrictEqual([3, 3]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the every 4 next cat and 5 next dog years', () => {
+  test('should return [6, 6] for animals age in'
+    + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
     expect(getHumanAge(43, 48))
       .toStrictEqual([6, 6]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the every 4 next cat and 5 next dog years', () => {
+  test('should return [7, 7] for animals age in'
+    + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
     expect(getHumanAge(44, 49))
       .toStrictEqual([7, 7]);
   });
 
-  test('should return cat\'s and dog\'s age'
-    + 'in human years for the every 4 next cat and 5 next dog years', () => {
+  test('should return [7, 7] for animals age in'
+  + 'human years for the every 4 next cat\'s and 5 next dog\'s years', () => {
     expect(getHumanAge(45, 50))
       .toStrictEqual([7, 7]);
   });
