@@ -12,7 +12,7 @@ describe('getHumanAge', () => {
   });
 
   test('should return 1 year for first 15 years of cat and dog', () => {
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
   test('should return 1 more year for the next 9 years of cat and dog', () => {
