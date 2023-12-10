@@ -19,16 +19,16 @@ describe('getHumanAge', () => {
   });
 
   test(
-    'should add extra cat"s year evry 4 years after 24 human"s years', 
+    'should add extra cat"s year evry 4 years after 24 human"s years',
     () => {
-    expect(getHumanAge(34, 23))
-      .toEqual([4, 1]);
-  });
+      expect(getHumanAge(34, 23))
+        .toEqual([4, 1]);
+    });
 
   test(
-    'should add extra dog"s year evry 5 years after 24 human"s years', 
+    'should add extra dog"s year evry 5 years after 24 human"s years',
     () => {
-    expect(getHumanAge(24, 39))
-      .toEqual([2, 5]);
-  });
+      expect(getHumanAge(24, 39))
+        .toEqual([2, 5]);
+    });
 });
