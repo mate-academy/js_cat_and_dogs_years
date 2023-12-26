@@ -19,6 +19,11 @@ describe('getHumanAge', () => {
   });
 
   test('should return an equivalence value', () => {
+    expect(getHumanAge(18, 19))
+      .toEqual([0, 0]);
+  });
+
+  test('should return an equivalence value', () => {
     expect(getHumanAge(26, 27))
       .toEqual([2, 2]);
   });
@@ -36,6 +41,11 @@ describe('getHumanAge', () => {
   test('should return an boundary value', () => {
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
+  });
+
+  test('should return an boundary value', () => {
+    expect(getHumanAge(14, 14))
+      .toEqual([1, 1]);
   });
 
   test('should return an boundary value', () => {
