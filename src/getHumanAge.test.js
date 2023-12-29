@@ -2,9 +2,9 @@
 
   describe('getHumanAge', () => {
     const { getHumanAge } = require('./getHumanAge');
-    test('should be declared', () => {
-    expect(getHumanAge)
-      .toBeInstanceOf(Function);
+    
+  test('should be declared', () => {
+    expect(getHumanAge).toBeInstanceOf(Function);
   });
 
   test('should return an array', () => {
