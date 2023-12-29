@@ -13,7 +13,7 @@ describe('getHumanAge', () => {
     const dog = 0;
     const humans = [0, 0];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 0 if cat and dogs are 14', () => {
@@ -21,7 +21,7 @@ describe('getHumanAge', () => {
     const dog = 14;
     const humans = [0, 0];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 1 if cat and dogs are 15', () => {
@@ -29,7 +29,7 @@ describe('getHumanAge', () => {
     const dog = 15;
     const humans = [1, 1];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 1 if cat and dogs are 23', () => {
@@ -37,7 +37,7 @@ describe('getHumanAge', () => {
     const dog = 23;
     const humans = [1, 1];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 2 if cat and dogs are 24', () => {
@@ -45,7 +45,7 @@ describe('getHumanAge', () => {
     const dog = 24;
     const humans = [2, 2];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 2 if cat and dogs are 27', () => {
@@ -53,7 +53,7 @@ describe('getHumanAge', () => {
     const dog = 27;
     const humans = [2, 2];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 3 and 2 if cat and dogs are 28', () => {
@@ -61,7 +61,7 @@ describe('getHumanAge', () => {
     const dog = 27;
     const humans = [3, 2];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
   test('should be 21 and 7 if cat and dogs are 100', () => {
@@ -69,6 +69,6 @@ describe('getHumanAge', () => {
     const dog = 100;
     const humans = [21, 7];
 
-    expect(getHumanAge(cat, dog)).toBe(humans);
+    expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 });
