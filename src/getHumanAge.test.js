@@ -57,17 +57,17 @@ describe('getHumanAge', () => {
   });
 
   test('should be 3 and 2 if cat and dogs are 28', () => {
-    const cat = 27;
-    const dog = 27;
+    const cat = 28;
+    const dog = 28;
     const humans = [3, 2];
 
     expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
 
-  test('should be 21 and 7 if cat and dogs are 100', () => {
+  test('should be 21 and 17 if cat and dogs are 100', () => {
     const cat = 100;
     const dog = 100;
-    const humans = [21, 7];
+    const humans = [21, 17];
 
     expect(getHumanAge(cat, dog)).toStrictEqual(humans);
   });
