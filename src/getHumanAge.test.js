@@ -28,12 +28,12 @@ describe('getHumanAge', () => {
       .toEqual([4, 1]);
   });
 
-  test('Should return different human ages for cats and dogs if it is equal 28 cats and dogs age', () => {
+  test('Should return different human ages for the same cats and dogs', () => {
     expect(getHumanAge(28, 28))
       .toEqual([3, 2]);
   });
 
-  test('Should return different human ages for cats and dogs if it is equal 100 cats and dogs age', () => {
+  test('Should return different human ages for the same cats and dogs', () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
