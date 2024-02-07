@@ -17,6 +17,12 @@ describe('getHumanAge', () => {
     for (let i = 0; i < inputCats.length; i++) {
       const result = getHumanAge(inputCats[i], inputDogs[i]);
 
+      if (result[0] !== expectedForCats[i] 
+        || result[1] !== expectedForDogs[i]) {
+        console.log(`Test failed for inputCat[${i}]:
+         ${inputCats[i]}, inputDog[${i}]: ${inputDogs[i]}`);
+      }
+
       expect(result[0]).toBe(expectedForCats[i]);
       expect(result[1]).toBe(expectedForDogs[i]);
     }
