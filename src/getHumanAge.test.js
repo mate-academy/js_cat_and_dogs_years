@@ -8,17 +8,23 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('Should return 0 value if catsAge < 15', () => {
-    expect(getHumanAge(14, 15))
-      .toEqual([0, 1]);
+  test('Should return zero if the first years > animalAge', () => {
+    expect(getHumanAge(14, 14))
+      .toEqual([0, 0]);
   });
+
+  test('Should return 1 value if the sum of first and second years > animalAge'
+    , () => {
+      expect(getHumanAge(23, 23))
+        .toEqual([1, 1]);
+    });
 
   test('Should return 0 value if dogsAge < 15', () => {
     expect(getHumanAge(15, 13))
       .toEqual([1, 0]);
   });
 
-  test('Should return 0 values if dogsAge === 0 and catsAge === 0', () => {
+  test('Should return zero values if dogsAge and the catsAge are zero', () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
@@ -28,13 +34,15 @@ describe('getHumanAge', () => {
       .toEqual([4, 1]);
   });
 
-  test('Should return different human ages for cats and dogs if it is equal 28 cats and dogs age', () => {
-    expect(getHumanAge(28, 28))
-      .toEqual([3, 2]);
-  });
+  test('Should return an equal years for cats and dogs ages are the same'
+    , () => {
+      expect(getHumanAge(28, 28))
+        .toEqual([3, 2]);
+    });
 
-  test('Should return different human ages for cats and dogs if it is equal 100 cats and dogs age', () => {
-    expect(getHumanAge(100, 100))
-      .toEqual([21, 17]);
-  });
+  test('Should return an equal years for cats and dogs ages are hundred'
+    , () => {
+      expect(getHumanAge(100, 100))
+        .toEqual([21, 17]);
+    });
 });
