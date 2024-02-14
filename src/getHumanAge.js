@@ -25,19 +25,4 @@ function convertToHuman(animalAge, first, second, other) {
   return 2 + Math.floor((animalAge - first - second) / other);
 }
 
-function testCases() {
-  const results = [];
-
-  for (let i = 0; i < 10; i++) {
-    const catAge = Math.floor(Math.random * 100 + 1);
-    const dogAge = Math.floor(Math.random * 100 + 1);
-
-    results.push(getHumanAge(catAge, dogAge));
-  }
-
-  return results;
-}
-
-module.exports = {
-  getHumanAge, testCases,
-};
+module.exports = { getHumanAge };
