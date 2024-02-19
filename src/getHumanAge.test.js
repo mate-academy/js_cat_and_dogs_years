@@ -1,20 +1,50 @@
 'use strict';
 
-const { getHumanAge } = require('./getHumanAge');
-
 describe('getHumanAge', () => {
+  const { getHumanAge } = require('./getHumanAge');
+
   test('should be declared', () => {
     expect(getHumanAge)
       .toBeInstanceOf(Function);
   });
-});
 
-test('should return human ages for cat and dog', () => {
-  expect(getHumanAge(0, 0)).toEqual([0, 0]);
+  test(`should return 0 for cat and dog
+   when they are less than 15 years old`, () => {
+    expect(getHumanAge(0, 0)).toStrictEqual([0, 0]);
+  });
 
-  expect(getHumanAge(28, 29)).toEqual([3, 3]);
+  test(`should return 0 for cat and dog
+   when they are less than 15 years old`, () => {
+    expect(getHumanAge(14, 14)).toStrictEqual([0, 0]);
+  });
 
-  expect(getHumanAge(32, 34)).toEqual([4, 4]);
+  test(`should return 1 for cat and dog
+   when they are less than 24 years old`, () => {
+    expect(getHumanAge(15, 15)).toStrictEqual([1, 1]);
+  });
 
-  expect(getHumanAge(71, 67)).toEqual([29, 25]);
+  test(`should return 1 for cat and dog
+   when they are less than 24 years old`, () => {
+    expect(getHumanAge(23, 23)).toStrictEqual([1, 1]);
+  });
+
+  test(`should return 2 for cat and dog
+   when they are less than 28 and 29 years old`, () => {
+    expect(getHumanAge(24, 24)).toStrictEqual([2, 2]);
+  });
+
+  test(`should return 2 for cat and dog
+   when they are less than 28 and 29 years old`, () => {
+    expect(getHumanAge(27, 27)).toStrictEqual([2, 2]);
+  });
+
+  test(`should return 2 for cat and 3 for dog
+  when they are less than 28 and 33 years old`, () => {
+    expect(getHumanAge(28, 28)).toStrictEqual([3, 2]);
+  });
+
+  test(`should return 21 for cat and 17 for dog
+  when they are less than 101 and 101 years old`, () => {
+    expect(getHumanAge(100, 100)).toStrictEqual([21, 17]);
+  });
 });
