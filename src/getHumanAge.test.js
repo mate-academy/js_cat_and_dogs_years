@@ -31,14 +31,29 @@ describe('getHumanAge', () => {
 
   test(`should round down human years
     if years of animals does not reach an integer value`, () => {
-    expect(getHumanAge(1, 16))
-      .toEqual([0, 1]);
+    expect(getHumanAge(1, 1))
+      .toEqual([0, 0]);
 
-    expect(getHumanAge(14, 23))
-      .toEqual([0, 1]);
+    expect(getHumanAge(14, 14))
+      .toEqual([0, 0]);
+
+    expect(getHumanAge(16, 16))
+      .toEqual([1, 1]);
+
+    expect(getHumanAge(23, 23))
+      .toEqual([1, 1]);
+
+    expect(getHumanAge(25, 25))
+      .toEqual([2, 2]);
 
     expect(getHumanAge(27, 28))
       .toEqual([2, 2]);
+
+    expect(getHumanAge(29, 30))
+      .toEqual([3, 3]);
+
+    expect(getHumanAge(31, 33))
+      .toEqual([3, 3]);
 
     expect(getHumanAge(102, 100))
       .toEqual([21, 17]);
