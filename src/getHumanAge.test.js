@@ -25,6 +25,14 @@ describe('getHumanAge', () => {
   });
 
   it('should be with expected result', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  });
+
+  it('should be with expected result', () => {
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+  });
+
+  it('should be with expected result', () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
