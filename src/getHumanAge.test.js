@@ -1,8 +1,13 @@
 'use strict';
 
-const { getHumanAge } = require('./getHumanAge');
-
 describe('getHumanAge', () => {
+  const { getHumanAge } = require('./getHumanAge');
+
+  test('should be declared', () => {
+    expect(getHumanAge)
+      .toBeInstanceOf(Function);
+  });
+
   test('should correctly convert cat and dog ages to human years', () => {
     expect(getHumanAge(28, 24)).toEqual([3, 2]);
   });
