@@ -9,18 +9,12 @@ describe('./getHumanAge', () => {
   });
 
   test(`should be 0 values if arguments are less than 15`, () => {
-    const result = getHumanAge(0, 0);
-
-    expect(result).toEqual([0, 0]);
-  });
-
-  test(`should be 0 values if arguments are less than 15`, () => {
     const result = getHumanAge(12, 13);
 
     expect(result).toEqual([0, 0]);
   });
 
-  test(`should be 1 human year if dog and cats years are 15`, () => {
+  test(`should add 1 human year for the first 15 animal years`, () => {
     const result = getHumanAge(15, 15);
 
     expect(result).toEqual([1, 1]);
