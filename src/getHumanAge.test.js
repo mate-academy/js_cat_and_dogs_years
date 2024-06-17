@@ -31,7 +31,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
-  test('[1, 1] for cat and dog when they are 23 years old', () => {
+  test('[1, 1]  for cat and dog when they are 23 years old', () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 });
