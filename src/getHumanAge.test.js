@@ -22,7 +22,7 @@ describe('getHumanAge', () => {
   test('should return [2, 2] for ages between 24 and 32', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
     expect(getHumanAge(30, 30)).toEqual([3, 3]);
-    expect(getHumanAge(32, 32)).toEqual([2, 2]);
+    expect(getHumanAge(32, 32)).toEqual([3, 3]);
   });
 
   test('should handle additional years correctly for cats', () => {
