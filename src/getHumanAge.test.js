@@ -3,55 +3,69 @@
 'use strict';
 
 describe('getHumanAge', () => {
-  test('should return [0, 0] for catAge 0 and dogAge 0', () => {
+  const { getHumanAge } = require('./getHumanAge');
+
+  it('should be a function', () => {
+    expect(getHumanAge).toBeInstanceOf(Function);
+  });
+
+  it('should return [0, 0] for catAge 0 and dogAge 0', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test('should return [0, 0] for catAge 14 and dogAge 14', () => {
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+  it('should return [1, 0] for catAge 14 and dogAge 0', () => {
+    expect(getHumanAge(14, 0)).toEqual([1, 0]);
   });
 
-  test('should return [1, 1] for catAge 15 and dogAge 15', () => {
+  it('should return [1, 1] for catAge 15 and dogAge 15', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  test('should return [1, 1] for catAge 23 and dogAge 23', () => {
-    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  it('should return [2, 1] for catAge 23 and dogAge 15', () => {
+    expect(getHumanAge(23, 15)).toEqual([2, 1]);
   });
 
-  test('should return [2, 2] for catAge 24 and dogAge 24', () => {
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+  it('should return [2, 2] for catAge 24 and dogAge 20', () => {
+    expect(getHumanAge(24, 20)).toEqual([2, 2]);
   });
 
-  test('should return [2, 2] for catAge 27 and dogAge 27', () => {
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+  it('should return [3, 3] for catAge 28 and dogAge 25', () => {
+    expect(getHumanAge(28, 25)).toEqual([3, 3]);
   });
 
-  test('should return [3, 2] for catAge 28 and dogAge 28', () => {
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+  it('should return [10, 5] for catAge 60 and dogAge 40', () => {
+    expect(getHumanAge(60, 40)).toEqual([10, 5]);
   });
 
-  test('should return [21, 17] for catAge 100 and dogAge 100', () => {
-    expect(getHumanAge(100, 100)).toEqual([21, 17]);
+  it('should return [0, 0] for catAge 0 and dogAge 0', () => {
+    expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test('should return [0, 0] for catAge 10 and dogAge 10', () => {
-    expect(getHumanAge(10, 10)).toEqual([0, 0]);
+  it('should return [0, 1] for catAge 0 and dogAge 14', () => {
+    expect(getHumanAge(0, 14)).toEqual([0, 1]);
   });
 
-  test('should return [2, 3] for catAge 25 and dogAge 30', () => {
-    expect(getHumanAge(25, 30)).toEqual([2, 3]);
+  it('should return [1, 1] for catAge 15 and dogAge 15', () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  test('should return [5, 4] for catAge 39 and dogAge 34', () => {
-    expect(getHumanAge(39, 34)).toEqual([5, 4]);
+  it('should return [1, 2] for catAge 15 and dogAge 24', () => {
+    expect(getHumanAge(15, 24)).toEqual([1, 2]);
   });
 
-  test('should return [10, 9] for catAge 60 and dogAge 59', () => {
-    expect(getHumanAge(60, 59)).toEqual([10, 9]);
+  it('should return [2, 2] for catAge 20 and dogAge 25', () => {
+    expect(getHumanAge(20, 25)).toEqual([2, 2]);
   });
 
-  test('should return [11, 10] for catAge 64 and dogAge 64', () => {
-    expect(getHumanAge(64, 64)).toEqual([11, 10]);
+  it('should return [3, 3] for catAge 25 and dogAge 30', () => {
+    expect(getHumanAge(25, 30)).toEqual([3, 3]);
+  });
+
+  it('should return [10, 8] for catAge 60 and dogAge 50', () => {
+    expect(getHumanAge(60, 50)).toEqual([10, 8]);
+  });
+
+  it('should return [0, 0] for negative catAge and dogAge', () => {
+    expect(getHumanAge(-5, -10)).toEqual([0, 0]);
   });
 });
