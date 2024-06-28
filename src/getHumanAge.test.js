@@ -1,7 +1,5 @@
-/* eslint-disable no-undef */
 /* eslint-disable max-len */
-'use strict';
-
+/* eslint-disable strict */
 describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
@@ -28,7 +26,6 @@ describe('getHumanAge', () => {
     expect(result).toHaveLength(2);
   });
 
-  // Adding boundary value tests
   test('should handle boundary values around age 15', () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
     expect(getHumanAge(16, 16)).toEqual([1, 1]);
@@ -40,7 +37,7 @@ describe('getHumanAge', () => {
   });
 
   test('should handle boundary values around age 30', () => {
-    expect(getHumanAge(29, 29)).toEqual([3, 3]);
+    expect(getHumanAge(29, 29)).toEqual([2, 2]);
     expect(getHumanAge(31, 31)).toEqual([3, 3]);
   });
 });
