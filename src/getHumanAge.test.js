@@ -27,19 +27,20 @@ describe('getHumanAge', () => {
     expect(result).toBeInstanceOf(Array);
     expect(result).toHaveLength(2);
   });
-});
 
-test('should handle boundary values around age 15', () => {
-  expect(getHumanAge(14, 14)).toEqual([0, 0]);
-  expect(getHumanAge(16, 16)).toEqual([1, 1]);
-});
+  // Adding boundary value tests
+  test('should handle boundary values around age 15', () => {
+    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+    expect(getHumanAge(16, 16)).toEqual([1, 1]);
+  });
 
-test('should handle boundary values around age 24', () => {
-  expect(getHumanAge(23, 23)).toEqual([1, 1]);
-  expect(getHumanAge(25, 25)).toEqual([2, 2]);
-});
+  test('should handle boundary values around age 24', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+    expect(getHumanAge(25, 25)).toEqual([2, 2]);
+  });
 
-test('should handle boundary values around age 30', () => {
-  expect(getHumanAge(29, 29)).toEqual([2, 2]);
-  expect(getHumanAge(31, 31)).toEqual([3, 3]);
+  test('should handle boundary values around age 30', () => {
+    expect(getHumanAge(29, 29)).toEqual([2, 2]);
+    expect(getHumanAge(31, 31)).toEqual([3, 3]);
+  });
 });
