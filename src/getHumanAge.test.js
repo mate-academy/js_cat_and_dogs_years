@@ -40,7 +40,7 @@ describe('getHumanAge', () => {
   });
 
   test('should handle boundary values around age 30', () => {
-    expect(getHumanAge(29, 29)).toEqual([2, 2]);
+    expect(getHumanAge(29, 29)).toEqual([3, 3]);
     expect(getHumanAge(31, 31)).toEqual([3, 3]);
   });
 });
