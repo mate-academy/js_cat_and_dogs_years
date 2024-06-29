@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable strict */
+'use strict';
+
 describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
