@@ -43,7 +43,7 @@ describe('getHumanAge', () => {
 
     expect(result).toEqual([3, 2]);
 
-    result = getHumanAge(29, 29);
+    result = getHumanAge(30, 29);
 
     expect(result).toEqual([3, 3]);
   });
