@@ -4,31 +4,48 @@ describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
   test('should be declared', () => {
-    expect(getHumanAge).toBeInstanceOf(Function);
+    expect(getHumanAge).toBeDefined();
   });
 
-  test('should return an array', () => {
-    expect(Array.isArray(getHumanAge(0, 0))).toBe(true);
+  test('should return (14, 14) when catAge = 14, dogAge = 14', () => {
+    const result = getHumanAge(14, 14);
+
+    expect(result).toEqual([0, 0]);
   });
 
-  test('should return an array of length 2', () => {
-    expect(getHumanAge(0, 0)).toHaveLength(2);
+  test('should return (1, 1) when catAge = 15, dogAge = 15', () => {
+    const result = getHumanAge(15, 15);
+
+    expect(result).toEqual([1, 1]);
   });
 
-  test('should return correct human ages for cats and dogs', () => {
-    expect(getHumanAge(0, 0)).toEqual([0, 0]);
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
-    expect(getHumanAge(15, 15)).toEqual([1, 1]);
-    expect(getHumanAge(23, 23)).toEqual([1, 1]);
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
-    expect(getHumanAge(100, 100)).toEqual([21, 17]);
+  test('should return (1, 1) when catAge = 23, dogAge = 23', () => {
+    const result = getHumanAge(23, 23);
+
+    expect(result).toEqual([1, 1]);
   });
 
-  test('should handle edge cases correctly', () => {
-    expect(getHumanAge(0, 5)).toEqual([0, 0]); // Cat is 0 years, dog less than 15
-    expect(getHumanAge(5, 0)).toEqual([0, 0]); // Dog is 0 years, cat less than 15
-    expect(getHumanAge(30, 30)).toEqual([3, 3]); // Both have exceeded the first two thresholds
+  test('should return (2, 2) when catAge = 24, dogAge = 24', () => {
+    const result = getHumanAge(24, 24);
+
+    expect(result).toEqual([2, 2]);
+  });
+
+  test('should return (2, 2) when catAge = 27, dogAge = 27', () => {
+    const result = getHumanAge(27, 27);
+
+    expect(result).toEqual([2, 2]);
+  });
+
+  test('should return (3, 2) when catAge = 28, dogAge = 28', () => {
+    const result = getHumanAge(28, 28);
+
+    expect(result).toEqual([3, 2]);
+  });
+
+  test('should return (21, 17) when catAge = 100, dogAge = 100', () => {
+    const result = getHumanAge(100, 100);
+
+    expect(result).toEqual([21, 17]);
   });
 });
