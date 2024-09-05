@@ -12,23 +12,39 @@ describe('getHumanAge', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test('should return [0, 0] for ages less than 15', () => {
+  test('should handle ages below the first threshold 15', () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
- test('should return correct human age with different cat and dog ages', () => {
-    expect(getHumanAge(15, 24)).toEqual([1, 2]);
+  test('should handle ages are 15', () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  test('should return NaN if the dog\'s age is a string', () => {
-    expect(getHumanAge(15, 'string')).toEqual([1, NaN]);
+  test('should handle ages more then 15', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
-  test('should return NaN if the cat\'s age is a string', () => {
-    expect(getHumanAge('string', 15)).toEqual([NaN, 1]);
+  test('should handle ages are 24', () => {
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
-  test('should return NaN if dog and cat ages are not passed', () => {
-    expect(getHumanAge()).toEqual([NaN, NaN]);
+  test('should handle ages more then 24', () => {
+    expect(getHumanAge(25, 25)).toEqual([2, 2]);
+  });
+
+  test('should handle age are 27', () => {
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+  });
+
+  test('should handle age are 28', () => {
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+  });
+
+  test('should handle age are 29', () => {
+    expect(getHumanAge(29, 29)).toEqual([3, 3]);
+  });
+
+  test('should handle age more than 29', () => {
+    expect(getHumanAge(30, 31)).toEqual([3, 3]);
   });
 });
