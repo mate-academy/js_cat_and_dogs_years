@@ -41,7 +41,7 @@ describe('getHumanAge', () => {
   });
 
   it('should return [6, 6] for 40 years of both cat and dog', () => {
-    expect(getHumanAge(40, 40)).toEqual([4, 3]);
+    expect(getHumanAge(40, 40)).toEqual([6, 5]);
   });
 
   it('should return [21, 17] for 100 years of both cat and dog', () => {
@@ -51,5 +51,4 @@ describe('getHumanAge', () => {
   it('should return [0, 0] for 0 years of both cat and dog', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
-
 });
