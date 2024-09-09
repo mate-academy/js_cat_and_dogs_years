@@ -1,9 +1,5 @@
-# IDE
-.idea
-.vscode
-
-# Node
-node_modules
-
-# MacOS
-.DS_Store
+js_cat_and_dogs_years/
+js_get_coin_combination/
+js_split_integer/
+js_task-transportation-on-vacation/
+node_modules/
