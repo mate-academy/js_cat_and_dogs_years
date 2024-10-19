@@ -8,19 +8,19 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should return a correct dog and cats years for an old animals', () => {
+  test('should return a correct human age equivalents for old animals', () => {
     const result = getHumanAge(100, 100);
 
     expect(result).toEqual([21, 17]);
   });
 
-  test('should return zero for 0 array', () => {
+  test('should return zero for animals with age 0', () => {
     const result = getHumanAge(0, 0);
 
     expect(result).toEqual([0, 0]);
   });
 
-  test('should return zero for animals younger 15 years', () => {
+  test('should return zero for cats and dogs younger 15 years', () => {
     const result = getHumanAge(14, 14);
 
     expect(result).toEqual([0, 0]);
@@ -38,7 +38,7 @@ describe('getHumanAge', () => {
     expect(result).toEqual([1, 1]);
   });
 
-  test('should return 2 for animals 24 y.o. ', () => {
+  test('should return 2 for animals aged between 24 and 28 years', () => {
     const result = getHumanAge(24, 24);
 
     expect(result).toEqual([2, 2]);
@@ -50,7 +50,7 @@ describe('getHumanAge', () => {
     expect(result).toEqual([2, 2]);
   });
 
-  test('should return 3 and 2 for cat and dog accordingly', () => {
+  test('should return 3 for cat and 2 for dog if both have 28 years  ', () => {
     const result = getHumanAge(28, 28);
 
     expect(result).toEqual([3, 2]);
