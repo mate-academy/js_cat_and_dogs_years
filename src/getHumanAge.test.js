@@ -7,4 +7,11 @@ describe('getHumanAge', () => {
     expect(getHumanAge)
       .toBeInstanceOf(Function);
   });
+
+  test('should be return 0', () => {
+    const result = getHumanAge(0, 0);
+
+    expect(result)
+      .toEqual([0, 0]);
+  });
 });
