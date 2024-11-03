@@ -33,51 +33,13 @@ describe('getHumanAge', () => {
   test('should convert years correctly', () => {
     const result = getHumanAge(catAge, dogAge);
 
-    if (catAge < 15 && dogAge < 15) {
-      expect(result).toEqual([0, 0]);
-    };
+    const getCountCatAge = catAge >= 24
+      ? 2 + Math.floor((catAge - 24) / 4)
+      : catAge >= 15 ? 1 : 0;
+    const getCountDogAge = dogAge >= 24
+      ? 2 + Math.floor((dogAge - 24) / 5)
+      : dogAge >= 15 ? 1 : 0;
 
-    if (catAge < 15 && dogAge >= 15 && dogAge < 24) {
-      expect(result).toEqual([0, 1]);
-    };
-
-    if (catAge < 15 && dogAge >= 24) {
-      const countAge = 2 + Math.floor((dogAge - 24) / 5);
-
-      expect(result).toEqual([0, countAge]);
-    };
-
-    if (catAge >= 15 && catAge < 24 && dogAge < 15) {
-      expect(result).toEqual([1, 0]);
-    };
-
-    if (catAge >= 15 && catAge < 24 && dogAge >= 15 && dogAge < 24) {
-      expect(result).toEqual([1, 1]);
-    };
-
-    if (catAge >= 15 && catAge < 24 && dogAge >= 24) {
-      const countDogAge = 2 + Math.floor((dogAge - 24) / 5);
-
-      expect(result).toEqual([1, countDogAge]);
-    };
-
-    if (catAge >= 24 && dogAge < 15) {
-      const conutCatAge = 2 + Math.floor((catAge - 24) / 4);
-
-      expect(result).toEqual([conutCatAge, 0]);
-    };
-
-    if (catAge >= 24 && dogAge >= 15 && dogAge < 24) {
-      const conutCatAge = 2 + Math.floor((catAge - 24) / 4);
-
-      expect(result).toEqual([conutCatAge, 1]);
-    };
-
-    if (catAge >= 24 && dogAge >= 24) {
-      const conutCatAge = 2 + Math.floor((catAge - 24) / 4);
-      const countDogAge = 2 + Math.floor((dogAge - 24) / 5);
-
-      expect(result).toEqual([conutCatAge, countDogAge]);
-    };
+    expect(result).toEqual([getCountCatAge, getCountDogAge]);
   });
 });
