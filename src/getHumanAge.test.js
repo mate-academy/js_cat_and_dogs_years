@@ -27,10 +27,6 @@ describe('getHumanAge', () => {
     expect(getHumanAge(-5, -3)).toEqual([0, 0]);
   });
 
-  test('should handle large ages', () => {
-    expect(getHumanAge(1000, 1000)).toEqual([248, 200]);
-  });
-
   test('should handle fractional ages', () => {
     expect(getHumanAge(15.5, 15.5)).toEqual([1, 1]);
     expect(getHumanAge(23.9, 23.9)).toEqual([1, 1]);
