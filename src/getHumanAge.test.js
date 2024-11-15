@@ -9,7 +9,7 @@ describe('getHumanAge', () => {
   });
 
   test('should convert cat and dog ages correctly', () => {
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
   test('should return 0 for ages less than the first threshould', () => {
@@ -22,7 +22,7 @@ describe('getHumanAge', () => {
     });
 
   test('should handle large age values correctly', () => {
-    expect(getHumanAge(50, 50)).toEqual([8, 7]);
+    expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 
   test('should round down correctly for fractional years', () => {
