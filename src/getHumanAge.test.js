@@ -14,7 +14,7 @@ describe('getHumanAge', () => {
   });
 
   test(`should return [0, 0] when both values are less than 14)`, () => {
-     expect(getHumanAge(14, 14))
+    expect(getHumanAge(14, 14))
       .toBeInstanceOf([0, 0]);
   });
 
