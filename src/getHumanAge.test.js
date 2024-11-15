@@ -30,7 +30,7 @@ describe('getHumanAge', () => {
   });
 
   test('should handle cases where catAge and dogAge are different', () => {
-    expect(getHumanAge(20, 28)).toEqual([1, 3]);
+    expect(getHumanAge(20, 28)).toEqual([1, 2]);
     expect(getHumanAge(100, 50)).toEqual([21, 7]);
   });
 });
