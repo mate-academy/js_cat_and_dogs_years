@@ -25,17 +25,17 @@ describe('getHumanAge', () => {
       .toHaveLength(2);
   });
 
-  test('should return 14, 14 for 0, 0 inputs', () => {
+  test('should return 0, 0 for 0, 0 inputs', () => {
     expect(getHumanAge(0, 0))
       .toEqual([0, 0]);
   });
 
-  test('should return 1, 1 for inputs 15, 15', () => {
+  test('should return [1, 1] for inputs 15, 15', () => {
     expect(getHumanAge(15, 15))
       .toEqual([1, 1]);
   });
 
-  test('should return 100, 100 for 21, 17', () => {
+  test('should return [21, 17] for inputs 100, 100', () => {
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
   });
