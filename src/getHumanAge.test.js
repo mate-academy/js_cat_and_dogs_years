@@ -14,7 +14,7 @@ describe('getHumanAge', () => {
 
   test('should return both 0 for both minus numbers', () => {
     expect(getHumanAge(-1, -1)).toEqual([0, 0]);
-  })
+  });
 
   test('should return both 0 for 14 both parameters', () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
