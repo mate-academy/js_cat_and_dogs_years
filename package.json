@@ -2,6 +2,7 @@
   "name": "get-human-age",
   "version": "1.0.0",
   "description": "Create tests for getHumanAge function",
+  "main": "src/getHumanAge.js",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
