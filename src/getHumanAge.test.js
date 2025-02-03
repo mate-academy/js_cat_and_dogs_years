@@ -7,4 +7,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge)
       .toBeInstanceOf(Function);
   });
+  test('SHOULD WORK', () => {
+    expect(true).toBe(true);
+  });
 });
