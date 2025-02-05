@@ -26,7 +26,3 @@ test('the result should be 1, 1 even if their age almost 2 years', () => {
 test('the result is rounded down', () => {
   expect(getHumanAge(29, 30)).toEqual([3, 3]);
 });
-
-test('the result is rounded down', () => {
-  expect(getHumanAge(29, 30)).toEqual([3, 3]);
-});
