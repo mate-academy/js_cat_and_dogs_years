@@ -51,19 +51,13 @@ describe('getHumanAge', () => {
     expect(result).toEqual([1, 1]);
   });
 
-  test('Should have expected value', () => {
-    const result = getHumanAge(28, 28);
+  test('Should return expected when dog and cat have different years', () => {
+    const result = getHumanAge(28, 27);
 
     expect(result).toEqual([3, 2]);
   });
 
-  test('Should have expected value', () => {
-    const result = getHumanAge(28, 28);
-
-    expect(result).toEqual([3, 2]);
-  });
-
-  test('Should have expected value', () => {
+  test('Should return expected value', () => {
     const result = getHumanAge(100, 100);
 
     expect(result).toEqual([21, 17]);
