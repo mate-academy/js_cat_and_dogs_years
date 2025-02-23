@@ -8,7 +8,7 @@ describe("getHumanAge", () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test("should return correct values if both animal ages are less then first argument", () => {
+  test("should return correct values if animal ages are greater than or equal to the first threshold but less than the sum of the first and second thresholds", () => {
     const result = getHumanAge(14, 14);
 
     expect(result).toEqual([0, 0]);
