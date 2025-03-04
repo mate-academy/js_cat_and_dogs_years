@@ -41,7 +41,7 @@ describe('getHumanAge', () => {
       expect(action).toEqual([2, 2]);
     });
 
-    test('should return correct results above 3th year of life', () => {
+    test('should return correct results above 3d year of life', () => {
       const action = getHumanAge(100, 100);
 
       expect(action[0]).toBeGreaterThan(action[1]);
