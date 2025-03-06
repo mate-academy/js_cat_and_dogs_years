@@ -2,7 +2,7 @@
   "name": "get-human-age",
   "version": "1.0.0",
   "description": "Create tests for getHumanAge function",
-  "main": "src/getHumanAge.js",
+  "main": "getHumanAge.test.js",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
@@ -16,7 +16,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "*",
-    "@mate-academy/scripts": "^0.9.14",
+    "@mate-academy/scripts": "^2.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-node": "^8.0.1",
