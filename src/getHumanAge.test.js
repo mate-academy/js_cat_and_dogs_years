@@ -32,11 +32,11 @@ describe('getHumanAge', () => {
     expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
-  test('should return 3 years for 27 cat years and 2 for 27 dog years', () => {
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+  test('should return 3 years for 28 cat years and 2 for 28 dog years', () => {
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
-  test(`hould return 21 years for 100 cat 
+  test(`should return 21 years for 100 cat 
           years and 17 for 100 dog years`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
