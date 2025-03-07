@@ -4,11 +4,7 @@ describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
   test('should be declared', () => {
-    expect(getHumanAge).toEqual(Function);
-  });
-
-  test('should be declared', () => {
-    expect(getHumanAge).toEqual(Function);
+    expect(getHumanAge).toBeInstanceOf(Function);
   });
 
   test('should be 0 if entered 0', () => {
@@ -27,12 +23,12 @@ describe('getHumanAge', () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 
-  test('boundary value: 15 years', () => {
-    expect(getHumanAge(15, 15)).toEqual([0, 0]);
+  test('boundary value: 14 years', () => {
+    expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
-  test('boundary value: 16 years', () => {
-    expect(getHumanAge(16, 16)).toEqual([1, 1]);
+  test('boundary value: 15 years', () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
   test('boundary value: 23 years', () => {
