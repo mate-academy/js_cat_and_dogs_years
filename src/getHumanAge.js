@@ -17,7 +17,6 @@ function getHumanAge(catAge, dogAge) {
     : dogAge < 24
       ? 1
       : 2 + Math.floor((dogAge - 24) / 5);
-
   return [catHumanYears, dogHumanYears];
 }
 module.exports = getHumanAge;
