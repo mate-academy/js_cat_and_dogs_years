@@ -38,6 +38,6 @@ describe('getHumanAge', () => {
   test('should handle edge cases', () => {
     expect(getHumanAge(15, 24)).toEqual([1, 2]);
     expect(getHumanAge(30, 30)).toEqual([3, 3]);
-    expect(getHumanAge(50, 50)).toEqual([9, 9]);
+    expect(getHumanAge(50, 50)).toEqual([8, 7]); // Corrected expected output
   });
 });
