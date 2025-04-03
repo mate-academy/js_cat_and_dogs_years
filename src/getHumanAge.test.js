@@ -1,8 +1,8 @@
 'use strict';
 
-describe('getHumanAge', () => {
-  const { getHumanAge } = require('./getHumanAge');
+const { getHumanAge } = require('./getHumanAge');
 
+describe('getHumanAge', () => {
   test('should be declared', () => {
     expect(getHumanAge)
       .toBeInstanceOf(Function);
