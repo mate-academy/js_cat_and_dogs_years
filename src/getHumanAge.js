@@ -6,7 +6,7 @@
  *
  * @returns {number[]}
  */
-function getHumanAge(catAge, dogAge) {
+function getHumanAge(catAge = 0, dogAge = 0) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
   const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
 
