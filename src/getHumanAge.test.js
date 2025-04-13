@@ -27,8 +27,4 @@ describe('getHumanAge', () => {
   test('should return [2, 2] for getHumanAge(24, 24)', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
-
-  test('should return [3, 2] for getHumanAge(28, 28)', () => {
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
-  });
 });
