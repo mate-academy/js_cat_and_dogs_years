@@ -41,11 +41,11 @@ describe('getHumanAge', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
-  test('returns [2, 3] when both are above second thresholds', () => {
+  test('returns [2, 2] when both are above second thresholds', () => {
     expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
-  test('returns [3, 3] for specific input', () => {
+  test('returns [3, 2] for specific input', () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
