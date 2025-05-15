@@ -5,6 +5,8 @@ cat's age in **cat** years) and `dogAge` (my dog's age in **dog** years) and
 returns an array where:
 
 - the first element is my cat's age in **human** years
+
+
 - the second element is my dog's age in **human** years
 
 As usually age is a whole number of years (discard the remainder)
