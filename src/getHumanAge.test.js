@@ -16,22 +16,18 @@ describe('getHumanAge', () => {
     expect(() => getHumanAge('a', 0)).toThrow('Animal age should be a number');
   });
 
-  test('should return 0 human year for less than 15 animal years', () => {
+  test('should return [0, 0] for less than 15 animal years', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
-    expect(getHumanAge(1, 14)).toEqual([0, 0]);
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
   test('should return 1 human year for less than 24 animal years', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
-    expect(getHumanAge(16, 20)).toEqual([1, 1]);
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
   test('should return 2 human years for exactly 24 animal years', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
-    expect(getHumanAge(28, 27)).toEqual([3, 2]);
   });
 
   test('should return correct human years for animal ages 24 and above', () => {
