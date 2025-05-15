@@ -23,6 +23,7 @@ As usually age is a whole number of years (discard the remainder)
 
 Examples:
 
+
 ```js
 getHumanAge(0, 0) === [0, 0]
 getHumanAge(14, 14) === [0, 0]
