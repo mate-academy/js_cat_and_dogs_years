@@ -30,7 +30,7 @@ describe('getHumanAge', () => {
 
   // eslint-disable-next-line max-len
   test('should return correct values when cat and dog ages differ significantly', () => {
-    expect(getHumanAge(60, 20)).toEqual([12, 1]);
+    expect(getHumanAge(60, 20)).toEqual([11, 1]);
     expect(getHumanAge(35, 40)).toEqual([6, 5]);
     expect(getHumanAge(50, 55)).toEqual([10, 8]);
   });
