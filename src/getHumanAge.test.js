@@ -1,7 +1,7 @@
 'use strict';
 
 describe('getHumanAge', () => {
-  const { getHumanAge } = require('./getHumanAge');
+  const { getHumanAge } = require('./getHumanAge.js');
 
   test('should return [0,0] when both catAge and dogAge are 0', () => {
     expect(getHumanAge(0, 0))
