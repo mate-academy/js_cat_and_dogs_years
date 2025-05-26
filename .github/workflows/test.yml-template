@@ -1,23 +1,11 @@
-name: Test
+function convertToHumanYears(petAge, first, second, step) {
+  if (petAge < first) return 0;
+if (petAge < first + second) return 1;
+  return 2 + Math.floor((petAge - first - second) / step);
+}
 
-on:
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+function getHumanAge(catAge, dogAge) {
+  const catHuman = convertToHumanYears(catAge, 15, 9, 4);
+  const dogHuman = convertToHumanYears(dogAge, 15, 9, 5);
+  return [catHuman, dogHuman];
+}
