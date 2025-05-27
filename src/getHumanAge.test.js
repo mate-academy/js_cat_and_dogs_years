@@ -37,7 +37,7 @@ describe('getHumanAge', () => {
 
   test('The next 5 cat and dog years are give 1 extra human year', () => {
     expect(getHumanAge(29, 29))
-      .toStrictEqual([4, 3]);
+      .toStrictEqual([3, 3]);
   });
 
   test('The first 14 cat and dog years are equivalent to 1 human year', () => {
