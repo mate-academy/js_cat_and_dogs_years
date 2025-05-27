@@ -2,7 +2,7 @@
 
 /**
  * @param {number} catAge
- * @param {number} dogAge
+ * @param {number}  dogAge
  *
  * @returns {number[]}
  */
