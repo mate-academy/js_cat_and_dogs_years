@@ -1,0 +1,32 @@
+function getHumanAge(catAge, dogAge) {
+  if (typeof catAge !== 'number' || !Number.isInteger(catAge) || catAge < 0) {
+    throw new Error('catAge must be a non-negative integer.');
+  }
+
+  if (typeof dogAge !== 'number' || !Number.isInteger(dogAge) || dogAge < 0) {
+    throw new Error('dogAge must be a non-negative integer.');
+  }
+
+  let catHumanAge;
+  if (catAge <= 15) {
+    catHumanAge = 1;
+  } else if (catAge <= 24) { // 15 + 9 = 24
+    catHumanAge = 2;
+  } else {
+    catHumanAge = 2 + Math.floor((catAge - 24) / 4);
+  }
+
+  let dogHumanAge;
+  if (dogAge <= 15) {
+    dogHumanAge = 1;
+  } else if (dogAge <= 24) { // 15 + 9 = 24
+    dogHumanAge = 2;
+  } else {
+    // 2 human years for the first 24 dog years, then 1 human year for every 5 subsequent dog years
+    dogHumanAge = 2 + Math.floor((dogAge - 24) / 5);
+  }
+
+  return [catHumanAge, dogHumanAge];
+}
+
+module.exports = getHumanAge;
