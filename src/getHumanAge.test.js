@@ -8,11 +8,6 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('return object', () => {
-    expect(getHumanAge)
-      .toBeInstanceOf(Object);
-  });
-
   test('should return 0 if age under 15', () => {
     expect(getHumanAge('14', '14'))
       .toStrictEqual([0, 0]);
