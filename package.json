@@ -24,5 +24,14 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MykolaDekalchuk/js_cat_and_dogs_years.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/MykolaDekalchuk/js_cat_and_dogs_years/issues"
+  },
+  "homepage": "https://github.com/MykolaDekalchuk/js_cat_and_dogs_years#readme"
 }
