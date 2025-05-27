@@ -38,7 +38,7 @@ describe('getHumanAge', () => {
   test('should handle large age values', () => {
     expect(getHumanAge(60, 60)).toEqual([
       2 + Math.floor((60 - 15 - 9) / 4),
-      2 + Math.floor((60 - 15 - 9) / 5)
+      2 + Math.floor((60 - 15 - 9) / 5),
     ]);
   });
 
