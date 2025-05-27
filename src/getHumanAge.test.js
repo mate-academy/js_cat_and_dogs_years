@@ -12,31 +12,31 @@ describe('getHumanAge', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test('should return 0, 0 if age values = 14 cats and 14 dogs', () => {
+  test('should return [0, 0] if entered values 14, 14', () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
-  test('should return 1, 1 if age values = 15 cats and 15 dogs', () => {
+  test('should return [1, 1] if entered values 15, 15', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
-  test('should return 1, 1 if age values = 23 cats and 23 dogs', () => {
+  test('should return [1, 1] if entered values 23, 23', () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
-  test('should return 2, 2 if age values = 24 cats and 24 dogs', () => {
+  test('should return [2, 2] if entered values 24, 24', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
 
-  test('should return 2, 2 if age values = 27 cats and 27 dogs', () => {
+  test('should return [2, 2] if entered values 27, 27', () => {
     expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
-  test('should return 3, 2 if age values = 28 cats and 28 dogs', () => {
+  test('should return [3, 2] if entered values 28, 28', () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
-  test('should return 21, 17 if age values = 100 cats and 100 dogs', () => {
+  test('should return [21, 17] if entered values 100, 100', () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
