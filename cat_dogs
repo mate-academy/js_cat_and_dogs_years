@@ -1,36 +1,32 @@
-// humanAge.test.js
-const getHumanAge = require('./humanAge');
+function getHumanAge(catAge, dogAge) {
+  if (typeof catAge !== 'number' || !Number.isInteger(catAge) || catAge < 0) {
+    throw new Error('catAge must be a non-negative integer.');
+  }
 
-describe('getHumanAge', () => {
-  test('should correctly convert dog age to human age for a positive integer', () => {
-    expect(getHumanAge(5)).toBe(35); // 5 dog years * 7 = 35 human years
-  });
+  if (typeof dogAge !== 'number' || !Number.isInteger(dogAge) || dogAge < 0) {
+    throw new Error('dogAge must be a non-negative integer.');
+  }
 
-  test('should return 0 when dog age is 0', () => {
-    expect(getHumanAge(0)).toBe(0);
-  });
+  let catHumanAge;
+  if (catAge <= 15) {
+    catHumanAge = 1;
+  } else if (catAge <= 24) { // 15 + 9 = 24
+    catHumanAge = 2;
+  } else {
+    catHumanAge = 2 + Math.floor((catAge - 24) / 4);
+  }
 
-  test('should correctly convert a fractional dog age', () => {
-    expect(getHumanAge(2.5)).toBe(17.5);
-  });
+  let dogHumanAge;
+  if (dogAge <= 15) {
+    dogHumanAge = 1;
+  } else if (dogAge <= 24) { // 15 + 9 = 24
+    dogHumanAge = 2;
+  } else {
+    // 2 human years for the first 24 dog years, then 1 human year for every 5 subsequent dog years
+    dogHumanAge = 2 + Math.floor((dogAge - 24) / 5);
+  }
 
-  test('should handle large dog age inputs', () => {
-    expect(getHumanAge(100)).toBe(700);
-  });
+  return [catHumanAge, dogHumanAge];
+}
 
-  test('should throw an error for a string input', () => {
-    expect(() => getHumanAge('abc')).toThrow('Input must be a non-negative number.');
-  });
-
-  test('should throw an error for a null input', () => {
-    expect(() => getHumanAge(null)).toThrow('Input must be a non-negative number.');
-  });
-
-  test('should throw an error for an undefined input', () => {
-    expect(() => getHumanAge(undefined)).toThrow('Input must be a non-negative number.');
-  });
-
-  test('should throw an error for a negative number input', () => {
-    expect(() => getHumanAge(-1)).toThrow('Input must be a non-negative number.');
-  });
-});
+module.exports = getHumanAge;
