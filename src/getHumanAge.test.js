@@ -13,6 +13,14 @@ describe('getHumanAge', () => {
       .toStrictEqual([0, 0]);
   });
 
+  test('should return 1 if cat age is exactly 15 and dog age is 15', () => {
+    expect(getHumanAge('15', '15')).toStrictEqual([1, 1]);
+  });
+
+  test('should return 1 if cat age is 23 and dog age is 23', () => {
+    expect(getHumanAge('23', '23')).toStrictEqual([1, 1]);
+  });
+
   test('should return 2 if cat age 24 and dog age 24', () => {
     expect(getHumanAge('24', '24'))
       .toStrictEqual([2, 2]);
