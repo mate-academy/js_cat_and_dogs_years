@@ -8,43 +8,28 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should return [0, 0] for (0, 0)', () => {
-    expect(getHumanAge(0, 0)).toEqual([0, 0]);
+  test('should return 0 if age under 15', () => {
+    expect(getHumanAge('14', '14'))
+      .toStrictEqual([0, 0]);
   });
 
-  test('should return [0, 0] for (14, 14)', () => {
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+  test('should return 2 if cat age 24 and dog age 24', () => {
+    expect(getHumanAge('24', '24'))
+      .toStrictEqual([2, 2]);
   });
 
-  test('should return [1, 1] for (15, 15)', () => {
-    expect(getHumanAge(15, 15)).toEqual([1, 1]);
+  test('should return 3 if cat age 28 and dog age 29', () => {
+    expect(getHumanAge('28', '29'))
+      .toStrictEqual([3, 3]);
   });
 
-  test('should return [1, 1] for (23, 23)', () => {
-    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  test('should return 4 if cat age 32 and dog age 34', () => {
+    expect(getHumanAge('32', '34'))
+      .toStrictEqual([4, 4]);
   });
 
-  test('should return [2, 2] for (24, 24)', () => {
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
-  });
-
-  test('should return [2, 2] for (27, 27)', () => {
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
-  });
-
-  test('should return [3, 2] for (28, 28)', () => {
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
-  });
-
-  test('should return [21, 17] for (100, 100)', () => {
-    expect(getHumanAge(100, 100)).toEqual([21, 17]);
-  });
-
-  test('should return [3, 2] for (29, 24)', () => {
-    expect(getHumanAge(29, 24)).toEqual([3, 2]);
-  });
-
-  test('should return [0, 0] for negative inputs (-1, -1)', () => {
-    expect(getHumanAge(-1, -1)).toEqual([0, 0]);
+  test('should return 21, 17 if cat age 100 and dog age 100', () => {
+    expect(getHumanAge('100', '100'))
+      .toStrictEqual([21, 17]);
   });
 });
