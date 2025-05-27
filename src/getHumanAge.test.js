@@ -33,7 +33,7 @@ describe('getHumanAge', () => {
       .toEqual([2, 2]);
   });
 
-  test('should return 3 and 2 human year for 28 animal year', () => {
+  test('should return 3 and 2 human year for 28 cat and dog year', () => {
     expect(getHumanAge(28, 28))
       .toEqual([3, 2]);
   });
