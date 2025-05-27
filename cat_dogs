@@ -1,1 +1,36 @@
+// humanAge.test.js
+const getHumanAge = require('./humanAge');
 
+describe('getHumanAge', () => {
+  test('should correctly convert dog age to human age for a positive integer', () => {
+    expect(getHumanAge(5)).toBe(35); // 5 dog years * 7 = 35 human years
+  });
+
+  test('should return 0 when dog age is 0', () => {
+    expect(getHumanAge(0)).toBe(0);
+  });
+
+  test('should correctly convert a fractional dog age', () => {
+    expect(getHumanAge(2.5)).toBe(17.5);
+  });
+
+  test('should handle large dog age inputs', () => {
+    expect(getHumanAge(100)).toBe(700);
+  });
+
+  test('should throw an error for a string input', () => {
+    expect(() => getHumanAge('abc')).toThrow('Input must be a non-negative number.');
+  });
+
+  test('should throw an error for a null input', () => {
+    expect(() => getHumanAge(null)).toThrow('Input must be a non-negative number.');
+  });
+
+  test('should throw an error for an undefined input', () => {
+    expect(() => getHumanAge(undefined)).toThrow('Input must be a non-negative number.');
+  });
+
+  test('should throw an error for a negative number input', () => {
+    expect(() => getHumanAge(-1)).toThrow('Input must be a non-negative number.');
+  });
+});
