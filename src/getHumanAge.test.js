@@ -36,7 +36,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge(28, 28)).toEqual([3, 2]);
   });
 
-  test(`Should return [21, 17] for (100, 100) as input`, () => {
+  test(`Should return  [21, 17] for (100, 100) as input`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
