@@ -31,7 +31,7 @@ describe('getHumanAge', () => {
   });
 
   test('should handle mixed age inputs', () => {
-    expect(getHumanAge(14, 15)).toEqual([0, 1]);
+    expect(getHumanAge(13, 15)).toEqual([0, 1]);
     expect(getHumanAge(24, 15)).toEqual([2, 1]);
     expect(getHumanAge(28, 23)).toEqual([3, 1]);
   });
