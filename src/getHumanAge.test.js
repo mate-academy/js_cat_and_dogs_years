@@ -3,6 +3,10 @@
 const { getHumanAge } = require('./getHumanAge');
 
 describe('getHumanAge', () => {
+  test('should be declared', () => {
+    expect(getHumanAge).toBeInstanceOf(Function);
+  });
+
   test('should return [0, 0] for age < 15', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
