@@ -61,6 +61,8 @@ describe('getHumanAge', () => {
     expect(getHumanAge(40, 40)).toEqual([
       2 + Math.floor((40 - 24) / 4),
       2 + Math.floor((40 - 24) / 5),
+      // Updated threshold logic: works correctly for <, not <=
+
     ]);
   });
 });
