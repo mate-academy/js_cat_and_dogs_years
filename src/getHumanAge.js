@@ -2,13 +2,13 @@
 
 /**
  * @param {number} catAge
- * @param {number} dogAge
+ * @param {number} dogAges
  *
  * @returns {number[]}
  */
-function getHumanAge(catAge, dogAge) {
+function getHumanAge(catAge, dogAges) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
-  const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
+  const dogToHuman = convertToHuman(dogAges, 15, 9, 5);
 
   return [catToHuman, dogToHuman];
 }
