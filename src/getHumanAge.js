@@ -22,6 +22,7 @@ function convertToHuman(animalAge, first, second, other) {
     return 1;
   }
 
+  
   return 2 + Math.floor((animalAge - first - second) / other);
 }
 
