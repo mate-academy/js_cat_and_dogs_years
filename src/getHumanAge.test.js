@@ -39,7 +39,7 @@ test('Should return 0 for 0 years', () => {
 });
 
 test('Should handle mix input', () => {
-  const result = getHumanAge(20, 45);
+  const result = getHumanAge(24, 34);
 
-  expect(result).toEqual([1, 6]);
+  expect(result).toEqual([2, 4]);
 });
