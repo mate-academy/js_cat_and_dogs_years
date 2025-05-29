@@ -3,26 +3,27 @@
 /**
  * @param {number} catAge
  * @param {number} dogAge
- *
- * @returns {number[]}
+ * @returns {[number, number]} [catHumanAge, dogHumanAge]
  */
 function getHumanAge(catAge, dogAge) {
-  const catToHuman = convertToHuman(catAge, 15, 9, 4);
-  const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
+  const convert = (age, steps) => {
+    if (age < steps[0]) {
+      return 0;
+    }
 
-  return [catToHuman, dogToHuman];
+    if (age < steps[0] + steps[1]) {
+      return 1;
+    }
+
+    const remaining = age - (steps[0] + steps[1]);
+
+    return 2 + Math.floor(remaining / steps[2]);
+  };
+
+  const catHumanAge = convert(catAge, [15, 9, 4]);
+  const dogHumanAge = convert(dogAge, [15, 9, 5]);
+
+  return [catHumanAge, dogHumanAge];
 }
 
-function convertToHuman(animalAge, first, second, other) {
-  if (animalAge < first) {
-    return 0;
-  }
-
-  if (animalAge < first + second) {
-    return 1;
-  }
-
-  return 2 + Math.floor((animalAge - first - second) / other);
-}
-
-module.exports = { getHumanAge };
+module.exports = getHumanAge;
