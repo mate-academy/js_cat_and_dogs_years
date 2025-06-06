@@ -8,6 +8,7 @@
  */
 function getHumanAge(catAge, dogAge) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
+
   const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
 
   return [catToHuman, dogToHuman];
