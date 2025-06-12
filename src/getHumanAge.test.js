@@ -60,48 +60,50 @@ describe('getHumanAge', () => {
     expect(getHumanAge(28, 29)).toEqual([3, 3]);
   });
 
-  test('should return [3, 2] for catAge between 28 and 32 and dogAge less than 29', () => {
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
-  });
+  test('should return [3, 2] for catAge between 28 and 32',
+    () => {
+      expect(getHumanAge(28, 28)).toEqual([3, 2]);
+    });
 
   test('should return [4, 4] for catAge and dogAge between 33 and 42', () => {
     expect(getHumanAge(34, 34)).toEqual([4, 4]);
   });
 
-  test('should return correct human ages for given large catAge and dogAge', () => {
-    expect(getHumanAge(100, 100)).toEqual([21, 17]);
-  });
+  test('should return correct human ages for given large catAge and dogAge',
+    () => {
+      expect(getHumanAge(100, 100)).toEqual([21, 17]);
+    });
 
   test('should not works with negative numbers', () => {
     expect(getHumanAge(-1, -1)).toEqual([0, 0]);
   });
 
   test('should return [0, 0] if arguments are not provided', () => {
-  expect(getHumanAge()).toEqual([0, 0]);
-});
+    expect(getHumanAge()).toEqual([0, 0]);
+  });
 
-test('should return [0, 0] if arguments are null', () => {
-  expect(getHumanAge(null, null)).toEqual([0, 0]);
-});
+  test('should return [0, 0] if arguments are null', () => {
+    expect(getHumanAge(null, null)).toEqual([0, 0]);
+  });
 
-test('should return [0, 0] if arguments are strings', () => {
-  expect(getHumanAge('15', '15')).toEqual([0, 0]);
-});
+  test('should return [0, 0] if arguments are strings', () => {
+    expect(getHumanAge('15', '15')).toEqual([0, 0]);
+  });
 
-test('should return correct value when only catAge is passed', () => {
-  expect(getHumanAge(30)).toEqual([3, 0]); // catAge = 30, dogAge = undefined
-});
+  test('should return correct value when only catAge is passed', () => {
+    expect(getHumanAge(30)).toEqual([3, 0]);
+  });
 
-test('should return correct value when only dogAge is passed (as second param)', () => {
-  expect(getHumanAge(undefined, 30)).toEqual([0, 3]); // undefined, dogAge = 30
-});
+  test('should return correct value when only dogAge is passed',
+    () => {
+      expect(getHumanAge(undefined, 30)).toEqual([0, 3]);
+    });
 
-test('should ignore decimal part and return correct values', () => {
-  expect(getHumanAge(28.9, 29.1)).toEqual([3, 3]); // округлення вниз
-});
+  test('should ignore decimal part and return correct values', () => {
+    expect(getHumanAge(28.9, 29.1)).toEqual([3, 3]);
+  });
 
-test('should handle extremely large numbers correctly', () => {
-  expect(getHumanAge(1000, 1000)).toEqual([245, 197]);
+  test('should handle extremely large numbers correctly', () => {
+    expect(getHumanAge(1000, 1000)).toEqual([245, 197]);
+  });
 });
-
-})
