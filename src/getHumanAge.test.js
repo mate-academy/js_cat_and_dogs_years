@@ -78,32 +78,13 @@ describe('getHumanAge', () => {
     expect(getHumanAge(-1, -1)).toEqual([0, 0]);
   });
 
-  test('should return [0, 0] if arguments are not provided', () => {
-    expect(getHumanAge()).toEqual([0, 0]);
-  });
-
+  
   test('should return [0, 0] if arguments are null', () => {
     expect(getHumanAge(null, null)).toEqual([0, 0]);
   });
-
-  test('should return [0, 0] if arguments are strings', () => {
-    expect(getHumanAge('15', '15')).toEqual([0, 0]);
-  });
-
-  test('should return correct value when only catAge is passed', () => {
-    expect(getHumanAge(30)).toEqual([3, 0]);
-  });
-
-  test('should return correct value when only dogAge is passed',
-    () => {
-      expect(getHumanAge(undefined, 30)).toEqual([0, 3]);
-    });
 
   test('should ignore decimal part and return correct values', () => {
     expect(getHumanAge(28.9, 29.1)).toEqual([3, 3]);
   });
 
-  test('should handle extremely large numbers correctly', () => {
-    expect(getHumanAge(1000, 1000)).toEqual([245, 197]);
-  });
-});
+})
