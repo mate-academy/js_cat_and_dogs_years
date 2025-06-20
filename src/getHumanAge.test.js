@@ -7,6 +7,10 @@ describe('getHumanAge', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
+  test('should return 0 year if age < 15', () => {
+    expect(getHumanAge(0, 0)).toEqual([0, 0]);
+  });
+
   test('should return 1 year for first 15 years', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });

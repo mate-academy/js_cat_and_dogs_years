@@ -1,5 +1,7 @@
 'use strict';
 
+// Implementation
+
 /**
  * @param {number} catAge
  * @param {number} dogAge
