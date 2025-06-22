@@ -6,6 +6,7 @@
  *
  * @returns {number[]}
  */
+
 function getHumanAge(catAge, dogAge) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
   const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
@@ -14,15 +15,23 @@ function getHumanAge(catAge, dogAge) {
 }
 
 function convertToHuman(animalAge, first, second, other) {
-  if (animalAge < first) {
+  if (animalAge === 0) {
     return 0;
   }
 
-  if (animalAge < first + second) {
+  if (animalAge <= first) {
     return 1;
   }
 
-  return 2 + Math.floor((animalAge - first - second) / other);
+  if (animalAge <= first + second) {
+    return 2;
+  }
+
+  if (animalAge <= first + second + other) {
+    return 3;
+  }
+
+  return Math.floor((animalAge - first - second - other) / other) + 3;
 }
 
 module.exports = { getHumanAge };
