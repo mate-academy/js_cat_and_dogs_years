@@ -17,7 +17,7 @@ describe('getHumanAge', () => {
   });
 
   test('should give 2 human years if age < 28', () => {
-    expect(getHumanAge(25, 21)).toEqual([2, 1]);
+    expect(getHumanAge(25, 25)).toEqual([2, 2]);
   });
 
   // eslint-disable-next-line max-len
