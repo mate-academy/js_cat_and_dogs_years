@@ -14,7 +14,7 @@ function getHumanAge(catAge, dogAge) {
 }
 
 function convertToHuman(animalAge, first, second, other) {
-  if (animalAge < first || animalAge === 0) {
+  if (animalAge < first) {
     return 0;
   }
 
