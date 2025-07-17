@@ -15,6 +15,7 @@ As usually age is a whole number of years (discard the remainder)
 - the next 9 **cat** years give 1 more **human** year
 - every 4 next **cat** years give 1 extra **human** year
 
+
 **Dog** years:
 
 - First 15 **dog** years give 1 **human** year
