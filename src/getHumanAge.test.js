@@ -1,40 +1,66 @@
 'use strict';
 
 describe('getHumanAge', () => {
-  const { getHumanAge } = require('./getHumanAge');
+  const { getHumanAge } = require('./getHumanAge.js');
 
   test('should be declared', () => {
     expect(getHumanAge)
       .toBeInstanceOf(Function);
   });
 
-  test('should be return 0 if catAge or dogAge is equal 0', () => {
-    expect(getHumanAge(0, 0))
-      .toEqual([0, 0]);
+  test(
+    `should return 0 for cat and dog when they are less than 15 years old`,
+    () => {
+      const result = getHumanAge(0, 0);
+
+      expect(result).toEqual([0, 0]);
+    });
+
+  test(`should return 0 for cat and dog when they are 14 years old`, () => {
+    const result = getHumanAge(14, 14);
+
+    expect(result).toEqual([0, 0]);
   });
 
-  test('should be return a right value for first 14 cat & dog age', () => {
-    expect(getHumanAge(14, 14))
-      .toEqual([0, 0]);
+  test(`should return 1 for cat and dog when they are 15 years old`, () => {
+    const result = getHumanAge(15, 15);
+
+    expect(result).toEqual([1, 1]);
   });
 
-  test('should be return a right value for first 15 cat & dog age', () => {
-    expect(getHumanAge(15, 15))
-      .toEqual([1, 1]);
+  test(`should return 1 for cat and dog when they are 23 years old`, () => {
+    const result = getHumanAge(23, 23);
+
+    expect(result).toEqual([1, 1]);
   });
 
-  test('should be return a right value for first 24 cat & dog age', () => {
-    expect(getHumanAge(24, 24))
-      .toEqual([2, 2]);
+  test(`should return 1 for cat and dog when they are 24 years old`, () => {
+    const result = getHumanAge(24, 24);
+
+    expect(result).toEqual([2, 2]);
   });
 
-  test('should be return a right value for first 28 cat & dog age', () => {
-    expect(getHumanAge(28, 28))
-      .toEqual([3, 2]);
+  test(`should return 2 for cat and dog when they are 27 years old`, () => {
+    const result = getHumanAge(27, 27);
+
+    expect(result).toEqual([2, 2]);
   });
 
-  test('should be return a right value for dogAge & catAge', () => {
-    expect(getHumanAge(100, 100))
-      .toEqual([21, 17]);
-  });
+  test(
+    `should return 3 for cat and
+    should return 2 for dog when they're 28 years old`,
+    () => {
+      const result = getHumanAge(28, 28);
+
+      expect(result).toEqual([3, 2]);
+    });
+
+  test(
+    `should return 21 for cat and
+    should return 17 for dog when they're 100 years old`,
+    () => {
+      const result = getHumanAge(100, 100);
+
+      expect(result).toEqual([21, 17]);
+    });
 });
