@@ -8,11 +8,11 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should returns [0, 0] when both ages are 0', () => {
+  test('should returns 0 when both ages are 0', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test('should returns [0, 0] for ages just below first threshold', () => {
+  test('should returns 0 for ages just below first threshold', () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
