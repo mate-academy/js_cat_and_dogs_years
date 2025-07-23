@@ -7,13 +7,13 @@
  * @returns {number[]}
  */
 function getHumanAge(catAge, dogAge) {
-  const catToHuman = convertToHumanAge(catAge, 15, 9, 4);
-  const dogToHuman = convertToHumanAge(dogAge, 15, 9, 5);
+  const catToHuman = convertToHuman(catAge, 15, 9, 4);
+  const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
 
   return [catToHuman, dogToHuman];
 }
 
-function convertToHumanAge(animalAge, first, second, other) {
+function convertToHuman(animalAge, first, second, other) {
   if (animalAge < first) {
     return 0;
   }
