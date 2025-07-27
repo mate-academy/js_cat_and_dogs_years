@@ -21,6 +21,7 @@ As usually age is a whole number of years (discard the remainder)
 - the next 9 **dog** years give 1 more **human** year
 - every 5 next **dog** years give 1 extra **human** year
 
+
 Examples:
 
 ```js
