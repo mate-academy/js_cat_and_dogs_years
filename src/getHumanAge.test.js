@@ -19,6 +19,10 @@ describe('getHumanAge', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
 
+  test('cat 23 years, dog 23 years -> [1, 1]', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  });
+
   test('cat 24 years, dog 24 years -> [2, 2]', () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
   });
