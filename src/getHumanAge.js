@@ -6,6 +6,8 @@
  *
  * @returns {number[]}
  */
+
+// This function converts cat and dog years to human years
 function getHumanAge(catAge, dogAge) {
   const catToHuman = convertToHuman(catAge, 15, 9, 4);
   const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
