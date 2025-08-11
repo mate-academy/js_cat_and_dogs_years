@@ -7,22 +7,23 @@
  * @returns {number[]}
  */
 function getHumanAge(catAge, dogAge) {
-  const catToHuman = convertToHuman(catAge, 15, 9, 4);
-  const dogToHuman = convertToHuman(dogAge, 15, 9, 5);
-
-  return [catToHuman, dogToHuman];
+  // eslint-disable-next-line max-len
+  return [
+    convertAnimalAge(catAge, 15, 9, 4),
+    convertAnimalAge(dogAge, 15, 9, 5),
+  ];
 }
 
-function convertToHuman(animalAge, first, second, other) {
-  if (animalAge < first) {
+function convertAnimalAge(age, first, second, additional) {
+  if (age < first) {
     return 0;
   }
 
-  if (animalAge < first + second) {
+  if (age < first + second) {
     return 1;
   }
 
-  return 2 + Math.floor((animalAge - first - second) / other);
+  return 2 + Math.floor((age - first - second) / additional);
 }
 
 module.exports = { getHumanAge };
