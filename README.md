@@ -5,6 +5,8 @@ cat's age in **cat** years) and `dogAge` (my dog's age in **dog** years) and
 returns an array where:
 
 - the first element is my cat's age in **human** years
+
+
 - the second element is my dog's age in **human** years
 
 As usually age is a whole number of years (discard the remainder)
@@ -17,11 +19,14 @@ As usually age is a whole number of years (discard the remainder)
 
 **Dog** years:
 
+
+
 - First 15 **dog** years give 1 **human** year
 - the next 9 **dog** years give 1 more **human** year
 - every 5 next **dog** years give 1 extra **human** year
 
 Examples:
+
 
 ```js
 getHumanAge(0, 0) === [0, 0]
