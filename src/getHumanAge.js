@@ -25,4 +25,5 @@ function convertToHuman(animalAge, first, second, other) {
   return 2 + Math.floor((animalAge - first - second) / other);
 }
 
+// export
 module.exports = { getHumanAge };
