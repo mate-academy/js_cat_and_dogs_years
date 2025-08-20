@@ -15,4 +15,9 @@ describe('getHumanAge', () => {
   test('should return [1, 1] when animal years are between 15 and 24', () => {
     expect(getHumanAge(18, 23)).toEqual([1, 1]);
   });
+
+  test(`should return [3, 5] when cat years are 28 
+    and dog years are 40`, () => {
+    expect(getHumanAge(28, 40).toEqual([3, 5]));
+  });
 });
