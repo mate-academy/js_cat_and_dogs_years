@@ -13,7 +13,8 @@ describe('getHumanAge', () => {
   });
 
   test('should return Array of numbers', () => {
-    expect(getHumanAge(28, 28).every(item => typeof item === 'number'));
+    expect(getHumanAge(28, 28).every(item => typeof item === 'number'))
+      .toBe(true);
   });
 
   test('shold return correct human ages', () => {
