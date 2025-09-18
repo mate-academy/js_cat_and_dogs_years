@@ -8,7 +8,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('should integer, () => {
+  test('should be integer', () => {
     const [cat, dog] = getHumanAge(54, 54);
 
     expect(Number.isInteger(cat)).toBe(true);
