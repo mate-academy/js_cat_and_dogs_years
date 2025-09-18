@@ -9,12 +9,25 @@ describe('getHumanAge', () => {
   });
 
   test('should be 0 if animal age < 15', () => {
+    const [cat, dog] = getHumanAge(54, 54);
+
+    expect(Number.isInteger(cat)).toBe(true);
+    expect(Number.isInteger(dog)).toBe(true);
+  });
+
+  test('should be 0 if animal age < 15', () => {
+    expect(getHumanAge(0, 0))
+      .toEqual([0, 0]);
+
     expect(getHumanAge(14, 14))
       .toEqual([0, 0]);
   });
 
   test('should be 1 if 15 <= animal age < 24', () => {
     expect(getHumanAge(16, 16))
+      .toEqual([1, 1]);
+
+    expect(getHumanAge(23, 23))
       .toEqual([1, 1]);
   });
 
@@ -27,5 +40,8 @@ describe('getHumanAge', () => {
 
     expect(getHumanAge(100, 100))
       .toEqual([21, 17]);
+
+    expect(getHumanAge(37, 48))
+      .toEqual([5, 6]);
   });
 });
