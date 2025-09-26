@@ -1,56 +1,58 @@
-'use strict';
+"use strict";
 
-describe('getHumanAge', () => {
-  const { getHumanAge} = require('./getHumanAge');
+describe("getHumanAge", () => {
+  const { getHumanAge } = require("./getHumanAge");
 
-  test('should be declared', () => {
-    expect(getHumanAge)
-      .toBeInstanceOf(Function);
+  test("should be declared", () => {
+    expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test('should return integers in array', () => {
-    const [catHumanAge, dogHumanAge] = getHumanAge(5, 5);
+  test("should return integers in array", () => {
+    const result = getHumanAge(5, 5);
+
+    expect(Array.isArray(result)).toBe(true);
+    expect(result).toHaveLength(2);
+
+    const [catHumanAge, dogHumanAge] = result;
 
     expect(Number.isInteger(catHumanAge)).toBe(true);
     expect(Number.isInteger(dogHumanAge)).toBe(true);
   });
 
-  test('should return [0, 0] for ages less than 15', () => {
+  test("should return [0, 0] for ages less than 15", () => {
     expect(getHumanAge(10, 10)).toEqual([0, 0]);
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
+    expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
-  test('should return [1, 1] for ages less than 24 but bigger than 14', () => {
+  test("should return [1, 1] for ages 15–23", () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
     expect(getHumanAge(20, 20)).toEqual([1, 1]);
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
-  test('should return [2, 2] for ages [24, 24]', () => {
+  test("should return [2, 2] for ages around 24–27", () => {
     expect(getHumanAge(24, 24)).toEqual([2, 2]);
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
-  test('should return 3 for cat equal age equal to 28', () => {
+  test("should handle combined remainder/step case at [28, 28]", () => {
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+  });
+
+  test("should return 3 for cat equal age equal to 28", () => {
     const [catHumanAge] = getHumanAge(28, 5);
 
     expect(catHumanAge).toBe(3);
   });
 
-  test('should return 3 for dog age equal to 29', () => {
+  test("should return 3 for dog age equal to 29", () => {
     const [, dogHumanAge] = getHumanAge(5, 29);
 
     expect(dogHumanAge).toBe(3);
   });
 
-  test('should calculate correctly big ages', () => {
+  test("should calculate correctly big ages", () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
-
 });
-
-
-
-
-
-
-
-
