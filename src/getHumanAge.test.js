@@ -47,7 +47,7 @@ describe('getHumanAge', () => {
 
   test('should handle different cat and dog ages independently', () => {
     expect(getHumanAge(28, 27)).toEqual([3, 2]);
-    expect(getHumanAge(25, 29)).toEqual([3, 3]);
+    expect(getHumanAge(25, 29)).toEqual([2, 3]);
   });
 
   test('should discard fractional inputs', () => {
