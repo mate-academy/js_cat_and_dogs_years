@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Create tests for getHumanAge function",
   "main": "src/getHumanAge.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
