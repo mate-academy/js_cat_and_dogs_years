@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @param {number} catAge
@@ -25,4 +25,13 @@ function convertToHuman(animalAge, first, second, other) {
   return 2 + Math.floor((animalAge - first - second) / other);
 }
 
-module.exports = { getHumanAge };
+module.exports = { getHumanAge, convertToHuman };
+/* module.exports = {
+  setupFilesAfterEnv: ["./jest.setup.js"],
+};
+module.exports = {
+  globals: {
+    myCustomFunction1: "getHumanAge",
+    myCustomFunction2: "convertToHuman",
+  },
+}; */
