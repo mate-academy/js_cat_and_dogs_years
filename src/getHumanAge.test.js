@@ -89,4 +89,22 @@ describe("getHumanAge", () => {
       expect(Number.isInteger(part)).toBe(true);
     });
   });
+
+    test("should return [3,3] if catAge === 29 and dogAge === 29", () => {
+      let result = getHumanAge(29, 29);
+      expect(result).toBeInstanceOf(Array);
+      expect(result).toEqual([3, 3]);
+      result.forEach((part) => {
+        expect(Number.isInteger(part)).toBe(true);
+      });
+    });
+
+    test("should return [3,2] if catAge === 30 and dogAge === 30", () => {
+      let result = getHumanAge(30, 30);
+      expect(result).toBeInstanceOf(Array);
+      expect(result).toEqual([3, 3]);
+      result.forEach((part) => {
+        expect(Number.isInteger(part)).toBe(true);
+      });
+    });
 });
