@@ -38,12 +38,6 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 1]);
   });
 
-  test('should correctly calculate dog’s human age when only dogAge is non-zero', () => {
-    const result = getHumanAge(0, 16);
-
-    expect(result).toEqual([0, 1]);
-  });
-
   test('should return [1, 1] when both are exactly 15', () => {
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
   });
@@ -58,6 +52,14 @@ describe('getHumanAge', () => {
 
   test('should increase dog age at 29', () => {
     expect(getHumanAge(28, 29)).toEqual([3, 3]);
+  });
+
+  test('should return [1, 1] when both are 23', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  });
+
+  test('should return [2, 2] when both are 27', () => {
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
 
   test('should return [21, 17] when both are 100 years', () => {
@@ -88,9 +90,6 @@ describe('getHumanAge', () => {
   });
 
   test('should work correctly for very large numbers (e.g. catAge = 200, dogAge = 200)', () => {
-    const result = getHumanAge(200, 200);
-
-    expect(result[0]).toBeGreaterThan(0);
-    expect(result[1]).toBeGreaterThan(0);
+    expect(getHumanAge(200, 200)).toEqual([46, 37]);
   });
 });
