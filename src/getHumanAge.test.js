@@ -1,8 +1,7 @@
 "use strict";
 
 describe("getHumanAge", () => {
-  const { getHumanAge } = require("./getHumanAge");
-  const { convertToHuman } = require("./getHumanAge");
+  const { getHumanAge, convertToHuman } = require("./getHumanAge");
 
   test("should be declared", () => {
     expect(getHumanAge.name).toBe("getHumanAge");
@@ -45,7 +44,7 @@ describe("getHumanAge", () => {
     });
   });
 
-  test("should return[1,1] if catAge === 15 and dogAge === 15", () => {
+  test("should return [1,1] if catAge === 15 and dogAge === 15", () => {
     let result = getHumanAge(15, 15);
     expect(result).toBeInstanceOf(Array);
     expect(result).toEqual([1, 1]);
@@ -99,7 +98,7 @@ describe("getHumanAge", () => {
       });
     });
 
-    test("should return [3,2] if catAge === 30 and dogAge === 30", () => {
+    test("should return [3,3] if catAge === 30 and dogAge === 30", () => {
       let result = getHumanAge(30, 30);
       expect(result).toBeInstanceOf(Array);
       expect(result).toEqual([3, 3]);

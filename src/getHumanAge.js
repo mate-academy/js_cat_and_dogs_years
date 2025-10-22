@@ -26,12 +26,3 @@ function convertToHuman(animalAge, first, second, other) {
 }
 
 module.exports = { getHumanAge, convertToHuman };
-/* module.exports = {
-  setupFilesAfterEnv: ["./jest.setup.js"],
-};
-module.exports = {
-  globals: {
-    myCustomFunction1: "getHumanAge",
-    myCustomFunction2: "convertToHuman",
-  },
-}; */
