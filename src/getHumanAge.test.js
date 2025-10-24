@@ -8,7 +8,7 @@ describe('getHumanAge', () => {
       .toBeInstanceOf(Function);
   });
 
-  test('result should be array of two numbers', () => {
+  test('result should be array of two numbers.', () => {
     expect(getHumanAge(1, 1)).toHaveLength(2);
   });
 
