@@ -7,35 +7,21 @@ describe('getHumanAge', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test('returns [0, 0] for ages [0, 0]', () => {
-    expect(getHumanAge(0, 0)).toEqual([0, 0]);
-  });
+  const testCases = [
+    { ages: [0, 0], expected: [0, 0] },
+    { ages: [14, 14], expected: [0, 0] },
+    { ages: [15, 15], expected: [1, 1] },
+    { ages: [23, 23], expected: [1, 1] },
+    { ages: [24, 24], expected: [2, 2] },
+    { ages: [27, 27], expected: [2, 2] },
+    { ages: [28, 28], expected: [3, 2] },
+    { ages: [100, 100], expected: [21, 17] },
+  ];
 
-  test('returns [0, 0] for ages [14, 14]', () => {
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
-  });
-
-  test('returns [1, 1] for ages [15, 15]', () => {
-    expect(getHumanAge(15, 15)).toEqual([1, 1]);
-  });
-
-  test('returns [1, 1] for ages [23, 23]', () => {
-    expect(getHumanAge(23, 23)).toEqual([1, 1]);
-  });
-
-  test('returns [2, 2] for ages [24, 24]', () => {
-    expect(getHumanAge(24, 24)).toEqual([2, 2]);
-  });
-
-  test('returns [2, 2] for ages [27, 27]', () => {
-    expect(getHumanAge(27, 27)).toEqual([2, 2]);
-  });
-
-  test('returns [3, 2] for ages [28, 28]', () => {
-    expect(getHumanAge(28, 28)).toEqual([3, 2]);
-  });
-
-  test('returns [21, 17] for ages [100, 100]', () => {
-    expect(getHumanAge(100, 100)).toEqual([21, 17]);
-  });
+  test.each(testCases)(
+    'returns $expected for ages $ages',
+    ({ ages, expected }) => {
+      expect(getHumanAge(...ages)).toEqual(expected);
+    }
+  );
 });
