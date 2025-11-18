@@ -10,12 +10,12 @@ describe('getHumanAge', () => {
 
   test('should return correct human ages for given cat and dog ages', () => {
     expect(getHumanAge(0, 0)).toEqual([0, 0]);
-    expect(getHumanAge(1, 1)).toEqual([0, 0]);
-    expect(getHumanAge(5, 5)).toEqual([0, 0]);
-    expect(getHumanAge(10, 10)).toEqual([0, 0]);
+    expect(getHumanAge(14, 14)).toEqual([0, 0]);
     expect(getHumanAge(15, 15)).toEqual([1, 1]);
-    expect(getHumanAge(20, 20)).toEqual([1, 1]);
-    expect(getHumanAge(25, 25)).toEqual([2, 2]);
-    expect(getHumanAge(30, 30)).toEqual([3, 3]);
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+    expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
