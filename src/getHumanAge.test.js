@@ -1,10 +1,41 @@
-'use strict';
+"use strict";
 
-describe('getHumanAge', () => {
-  const { getHumanAge } = require('./getHumanAge');
+describe("getHumanAge", () => {
+  const { getHumanAge } = require("./getHumanAge");
 
   test('should be declared', () => {
-    expect(getHumanAge)
-      .toBeInstanceOf(Function);
+    expect(getHumanAge).toBeInstanceOf(Function);
+  });
+
+  test('cat and dog age are 0', () => {
+    expect(getHumanAge(0, 0)).toEqual([0, 0]);
+  });
+
+  test('cat and dog age less than 15', () => {
+    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+  });
+
+  test('cat and dog age are 15', () => {
+    expect(getHumanAge(15, 15)).toEqual([1, 1]);
+  });
+
+  test('cat and dog age are 23', () => {
+    expect(getHumanAge(23, 23)).toEqual([1, 1]);
+  });
+
+  test('cat and dog age are 24', () => {
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+  });
+
+  test('cat and dog age are 27', () => {
+    expect(getHumanAge(27, 27)).toEqual([2, 2]);
+  });
+
+  test('cat and dog age are 28', () => {
+    expect(getHumanAge(28, 28)).toEqual([3, 2]);
+  });
+
+  test('cat and dog age 100', () => {
+    expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 });
