@@ -24,6 +24,10 @@ describe('getHumanAge', () => {
     expect(getHumanAge(23, 23)).toEqual([1, 1]);
   });
 
+  test('should return [2, 2] for ages at 24', () => {
+    expect(getHumanAge(24, 24)).toEqual([2, 2]);
+  });
+
   test('should return [2, 2] for cat 27 and dog 27', () => {
     expect(getHumanAge(27, 27)).toEqual([2, 2]);
   });
