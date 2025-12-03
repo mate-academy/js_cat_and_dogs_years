@@ -30,7 +30,7 @@ describe('getHumanAge', () => {
       .toEqual([3, 2]);
   });
 
-  test('Should increase dog years by 1 every 4 years after 24 years', () => {
+  test('Should increase dog years by 1 every 5 years after 24 years', () => {
     expect(getHumanAge(28, 29))
       .toEqual([3, 3]);
 
