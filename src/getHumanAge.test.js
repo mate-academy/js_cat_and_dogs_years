@@ -9,13 +9,17 @@ describe('getHumanAge', () => {
   });
 
   test('should return correct human age for given dog age', () => {
-    const result = getHumanAge(5, 5);
+    const dogAge = 10;
+    const humanAge = 0;
+    const result = getHumanAge(humanAge, dogAge);
 
     expect(result).toEqual([0, 0]);
   });
 
   test('should return 0 for non-positive dog age', () => {
-    const result = getHumanAge(3, -1);
+    const dogAge = 0;
+    const humanAge = 5;
+    const result = getHumanAge(humanAge, dogAge);
 
     expect(result).toEqual([0, 0]);
   });
