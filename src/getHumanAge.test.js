@@ -28,7 +28,7 @@ describe('getHumanAge', () => {
   });
 
   test('should increase dog human age by 1 for every full 5 years after 24', () => {
-    expect(getHumanAge(0, 29)).toEqual([0, 2]);
+    expect(getHumanAge(0, 29)).toEqual([0, 3]);
     expect(getHumanAge(0, 30)).toEqual([0, 3]);
     expect(getHumanAge(0, 35)).toEqual([0, 4]);
   });
@@ -40,17 +40,16 @@ describe('getHumanAge', () => {
 
   test('should discard remaining years after full dog year blocks', () => {
     expect(getHumanAge(0, 31)).toEqual([0, 3]);
-    expect(getHumanAge(0, 34)).toEqual([0, 3]);
+    expect(getHumanAge(0, 34)).toEqual([0, 4]);
   });
 
   test('should correctly calculate different human ages for cat and dog after 24 years', () => {
-    expect(getHumanAge(28, 29)).toEqual([3, 2]);
+    expect(getHumanAge(28, 29)).toEqual([3, 3]);
     expect(getHumanAge(32, 30)).toEqual([4, 3]);
   });
 
   test('should correctly calculate human ages for large values', () => {
     expect(getHumanAge(100, 100))
-      .toEqual([2 + Math.floor((100 - 24) / 4), 2 + Math.floor((100 - 24) / 5)]);
+      .toEqual([21, 17]);
   });
-
 });
