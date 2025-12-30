@@ -36,6 +36,15 @@ test('dog: every 5 years adds 1 human year', () => {
   expect(getHumanAge(24, 29)).toEqual([2, 3]);
 });
 
+test('should return [2, 2] for 27 years', () => {
+  expect(getHumanAge(27, 27)).toEqual([2, 2]);
+});
+
+test('should return [3, 2] for 28 years', () => {
+  expect(getHumanAge(28, 28)).toEqual([3, 2]);
+});
+
+
 test('should work for big numbers', () => {
   expect(getHumanAge(100, 100)).toEqual([21, 17]);
 });
