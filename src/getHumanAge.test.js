@@ -9,11 +9,11 @@ describe("getHumanAge", () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test("Result should have correct array length ", () => {
+  test("Result should have correct array length", () => {
     expect(getHumanAge(100, 100)).toHaveLength(2);
   });
 
-  test("should be array with results [0, 0] if two parameters equal 0 ", () => {
+  test("should be array with results [0, 0] if two parameters equal 14 ", () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
