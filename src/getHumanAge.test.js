@@ -13,11 +13,11 @@ describe("getHumanAge", () => {
     expect(getHumanAge(100, 100)).toHaveLength(2);
   });
 
-  test("should be array with results [0, 0] if two parameters equal 14 ", () => {
-    expect(getHumanAge(14, 14)).toEqual([0, 0]);
+  test("should be array with results [0, 0] if two parameters equal 0 ", () => {
+    expect(getHumanAge(0, 0)).toEqual([0, 0]);
   });
 
-  test("should be array with results [0, 0] if two parameters < 15 ", () => {
+  test("should be array with results [0, 0] if two parameters equal 14 ", () => {
     expect(getHumanAge(14, 14)).toEqual([0, 0]);
   });
 
