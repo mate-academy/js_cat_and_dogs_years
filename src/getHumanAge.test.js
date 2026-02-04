@@ -24,4 +24,8 @@ describe("getHumanAge", () => {
   test("should be be array with second zero result if second parameter = 0", () => {
     expect(getHumanAge(28, 0)).toEqual([3, 0]);
   });
+
+  test("should be a correct result if both parameters = 100", () => {
+    expect(getHumanAge(100, 100)).toEqual([21, 17]);
+  });
 });
