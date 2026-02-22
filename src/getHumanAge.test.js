@@ -12,17 +12,27 @@ describe("getHumanAge", () => {
   });
 
   test("should be 0 if animal's age less then first", () => {
-    const result = getHumanAge(10, 8);
+    const result = getHumanAge(14, 14);
     expect(result).toEqual([0, 0]);
   });
 
   test("should be 1 if animal's age less then sum of first and second", () => {
-    const result = getHumanAge(20, 20);
+    const result = getHumanAge(15, 15);
     expect(result).toEqual([1, 1]);
   });
 
-  test("should be rounder number", () => {
-    const result = getHumanAge(30, 38);
-    expect(result).toEqual([3, 4]);
+  test("should return [2, 2] for 24, 24 animal's age", () => {
+    const result = getHumanAge(24, 24);
+    expect(result).toEqual([2, 2]);
+  });
+
+  test("should return [3, 2] for 28, 28 animal's age", () => {
+    const result = getHumanAge(28, 28);
+    expect(result).toEqual([3, 2]);
+  });
+
+  test("should return [21, 17] for 100, 100 animal's age", () => {
+    const result = getHumanAge(100, 100);
+    expect(result).toEqual([21, 17]);
   });
 });
