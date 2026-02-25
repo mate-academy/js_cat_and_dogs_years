@@ -14,6 +14,13 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 0]);
   });
 
+  test(`should get 0 for human ages
+    if the cat and dog ages are less than 15`, () => {
+    const result = getHumanAge(14, 14);
+
+    expect(result).toEqual([0, 0]);
+  });
+
   test(`should get correct human ages
     for both cat and dog ages being 15`, () => {
     const result = getHumanAge(15, 15);
@@ -21,9 +28,24 @@ describe('getHumanAge', () => {
     expect(result).toEqual([1, 1]);
   });
 
+  test(`should get 0 for human ages
+    if the cat and dog ages are less than 24`, () => {
+    const result = getHumanAge(23, 23);
+
+    expect(result).toEqual([1, 1]);
+  });
+
   test(`should get correct human ages
     for both cat and dog ages being 24`, () => {
     const result = getHumanAge(24, 24);
+
+    expect(result).toEqual([2, 2]);
+  });
+
+  test(`should get 0 for human ages
+    before the first cat age that is every 4th year
+    and the first dog age that is every 5th year`, () => {
+    const result = getHumanAge(27, 27);
 
     expect(result).toEqual([2, 2]);
   });
