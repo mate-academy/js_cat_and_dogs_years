@@ -33,4 +33,31 @@ describe('getHumanAge', () => {
 
       expect(result).toEqual([21, 17]);
     });
+
+  test('should return 0 human years for 14 years dog or cat', () => {
+    const result = getHumanAge(14, 14);
+
+    expect(result).toEqual([0, 0]);
+  });
+
+  test('should return 1 human year for 23 years dog or cat', () => {
+    const result = getHumanAge(23, 23);
+
+    expect(result).toEqual([1, 1]);
+  });
+
+  test('should return 2 human years for 27 years dog or cat', () => {
+    const result = getHumanAge(27, 27);
+
+    expect(result).toEqual([2, 2]);
+  });
+
+  test(
+    'should return 3 human years for 28 '
+    + 'years dog and 2 human years for 28 years cat',
+    () => {
+      const result = getHumanAge(28, 28);
+
+      expect(result).toEqual([3, 2]);
+    });
 });
