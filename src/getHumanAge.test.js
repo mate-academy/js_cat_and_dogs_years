@@ -4,7 +4,6 @@ describe('getHumanAge', () => {
   const { getHumanAge } = require('./getHumanAge');
 
   test('should be declared', () => {
-    expect(getHumanAge)
-      .toBeInstanceOf(Function);
+    expect(getHumanAge).toBeInstanceOf(Function);
   });
 });
