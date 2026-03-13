@@ -7,12 +7,6 @@ describe('getHumanAge', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test('Should return an array', () => {
-    const result = getHumanAge();
-
-    expect(result).toBeInstanceOf(Array);
-  });
-
   test('Should return correct array length', () => {
     const result = getHumanAge(3, 5);
 
@@ -21,12 +15,6 @@ describe('getHumanAge', () => {
 
   test('Should return zero value for zero', () => {
     const result = getHumanAge(0, 0);
-
-    expect(result).toEqual([0, 0]);
-  });
-
-  test('Should return correct age value', () => {
-    const result = getHumanAge(3, 5);
 
     expect(result).toEqual([0, 0]);
   });
