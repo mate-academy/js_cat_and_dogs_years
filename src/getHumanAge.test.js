@@ -37,14 +37,26 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 0]);
   });
 
-  test('Should return one for age = 15 and < 24', () => {
+  test('Should return one for age >= 15 and < 24', () => {
     const result = getHumanAge(15, 15);
 
     expect(result).toEqual([1, 1]);
   });
 
-  test('Should return additional year if > 24', () => {
+  test('Should return one year if < 24', () => {
+    const result = getHumanAge(23, 23);
+
+    expect(result).toEqual([1, 1]);
+  });
+
+  test('Should return additional year if >= 24', () => {
     const result = getHumanAge(24, 24);
+
+    expect(result).toEqual([2, 2]);
+  });
+
+  test('Should return two years if > 24', () => {
+    const result = getHumanAge(27, 27);
 
     expect(result).toEqual([2, 2]);
   });
