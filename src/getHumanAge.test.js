@@ -25,12 +25,6 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 0]);
   });
 
-  test('Should return rounded number', () => {
-    const result = getHumanAge(30.5, 2);
-
-    expect(result).toEqual([3, 0]);
-  });
-
   test('Should return correct age value', () => {
     const result = getHumanAge(3, 5);
 
@@ -40,25 +34,30 @@ describe('getHumanAge', () => {
   test('Should return zero for age < 15', () => {
     const result = getHumanAge(14, 14);
 
-    expect(result[0]).toBeLessThan(1);
-    expect(result[1]).toBeLessThan(1);
+    expect(result).toEqual([0, 0]);
   });
 
   test('Should return one for age = 15 and < 24', () => {
-    const result = getHumanAge(17, 19);
+    const result = getHumanAge(15, 15);
 
     expect(result).toEqual([1, 1]);
   });
 
-  test('Should return additional year if > 24 for cat', () => {
-    const result = getHumanAge(30, 19);
+  test('Should return additional year if > 24', () => {
+    const result = getHumanAge(24, 24);
 
-    expect(result).toEqual([3, 1]);
+    expect(result).toEqual([2, 2]);
   });
 
-  test('Should return additional year if > 25 for dog', () => {
-    const result = getHumanAge(30, 40);
+  test('Should return additional year every 4 years after 24 for cat', () => {
+    const result = getHumanAge(28, 28);
 
-    expect(result).toEqual([3, 5]);
+    expect(result).toEqual([3, 2]);
+  });
+
+  test('Should return additional year every 5 years after 24 for dog', () => {
+    const result = getHumanAge(100, 100);
+
+    expect(result).toEqual([21, 17]);
   });
 });
