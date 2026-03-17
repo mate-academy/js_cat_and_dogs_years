@@ -37,9 +37,21 @@ describe('getHumanAge', () => {
     expect(result).toEqual([2, 2]);
   });
 
+  test('should return [2, 2] for ages = 27', () => {
+    const result = getHumanAge(27, 27);
+
+    expect(result).toEqual([2, 2]);
+  });
+
   test('should calculate different ages for cat and dog after 24', () => {
     const result = getHumanAge(28, 28);
 
     expect(result).toEqual([3, 2]);
+  });
+
+  test('should return [21, 17] for large ages', () => {
+    const result = getHumanAge(100, 100);
+
+    expect(result).toEqual([21, 17]);
   });
 });
