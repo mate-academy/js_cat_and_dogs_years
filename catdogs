@@ -1,0 +1,51 @@
+const { getHumanAge } = require('./getHumanAge'); // Replace './getHumanAge' with your actual import path
+
+describe('getHumanAge', () => {
+  // Basic Cases
+  it('should convert cat age 8 and dog age 10', () => {
+    const result = getHumanAge(8, 10);
+    expect(result).toEqual([2, 2]);
+  });
+
+  it('should convert cat age 20 and dog age 30', () => {
+    const result = getHumanAge(20, 30);
+    expect(result).toEqual([5, 5]);
+  });
+
+  it('should convert cat age 15 and dog age 24', () => {
+    const result = getHumanAge(15, 24);
+    expect(result).toEqual([2, 4]);
+  });
+
+  // Edge Cases
+  it('should convert cat age 1 and dog age 1', () => {
+    const result = getHumanAge(1, 1);
+    expect(result).toEqual([1, 1]);
+  });
+
+  it('should convert cat age 24 and dog age 45', () => {
+    const result = getHumanAge(24, 45);
+    expect(result).toEqual([5, 8]);
+  });
+
+  it('should convert cat age 30 and dog age 55', () => {
+    const result = getHumanAge(30, 55);
+    expect(result).toEqual([6, 9]);
+  });
+
+  // Random Cases
+  it('should convert cat age 10 and dog age 40', () => {
+    const result = getHumanAge(10, 40);
+    expect(result).toEqual([2, 6]);
+  });
+
+  it('should convert cat age 18 and dog age 35', () => {
+    const result = getHumanAge(18, 35);
+    expect(result).toEqual([3, 7]);
+  });
+
+  it('should convert cat age 22 and dog age 50', () => {
+    const result = getHumanAge(22, 50);
+    expect(result).toEqual([4, 8]);
+  });
+});
