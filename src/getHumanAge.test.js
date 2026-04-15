@@ -7,8 +7,8 @@ describe('getHumanAge', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  test(`should calculate large and different 
-        ages for dogs and cats correctly`, () => {
+  test(`should calculate large and different ages 
+    for dogs and cats correctly`, () => {
     expect(getHumanAge(100, 100)).toEqual([21, 17]);
   });
 
