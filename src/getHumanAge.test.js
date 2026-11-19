@@ -7,7 +7,7 @@ describe('getHumanAge', () => {
     expect(getHumanAge).toBeInstanceOf(Function);
   });
 
-  // 0, 0 -> [0, 0]
+  // (0, 0) -> [0, 0]
   test('should return [0, 0] if animal ages are 0', () => {
     const result = getHumanAge(0, 0);
 
