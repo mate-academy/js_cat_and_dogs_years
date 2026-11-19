@@ -14,13 +14,6 @@ describe('getHumanAge', () => {
     expect(result).toEqual([0, 0]);
   });
 
-  // (14, 14) -> [0, 0]
-  test('should return [14, 14] if animal ages are 0', () => {
-    const result = getHumanAge(0, 0);
-
-    expect(result).toEqual([0, 0]);
-  });
-
   // (15, 15) -> [1, 1]
   test('should return [15, 15] if animal ages are [1, 1]', () => {
     const result = getHumanAge(15, 15);
